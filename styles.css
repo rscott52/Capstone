@@ -1,13 +1,123 @@
-* {
+#index-page {
   background:#354F52;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   }
-.hamburger {
-  color: #DE8F3F;
-}
-.bar {
 
+  .homepage-logo {
+    width: 100%;
+    margin: 100px auto 100px;
+    text-align: center;
+  }
+  .favorite-system-selector {
+    text-align: center;
+    color: #de8f3f;
+  }
+
+  .index-system-image {
+    width: 400px;
+    margin-bottom: 50px;
+  }
+
+  #index-page-footer {
+    color: #de8f3f;
+    display:flex;
+    text-align: center;
+    justify-content: space-evenly;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  #index-page-footer a {
+    color: #de8f3f;
+  }
+
+  #index-page-footer a:hover {
+    color: #96E2ED;
+    ;
+  }
+
+#about-page {
+  background: #96E2ED;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+  .about-page-logo {
+    width: 100%;
+    margin: 100px auto 25px;
+    text-align: center;
+  }
+
+  .about-us-section {
+    width: 500px;
+    height: 300px;
+    background: #FBF7F4;
+    margin: 50px auto 20px;
+  }
+
+  #about-page-footer {
+    color: #403D39;
+    display:flex;
+    text-align: center;
+    justify-content: space-evenly;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  #about-page-footer a {
+    color: #403D39;
+  }
+
+  #about-page-footer a:hover {
+    color:#de8f3f;
+    ;
+  }
+
+#contact-page {
+  background: #DE8F3F;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contact-page-logo {
+  width: 100%;
+  margin: 100px auto 100px;
+  text-align: center;
+}
+
+.contact-us-section {
+  width: 500px;
+  height: 300px;
+  background: #FBF7F4;
+  margin: 50px auto 20px;
+}
+
+#contact-page-footer {
+  color: #96E2ED;
+  display:flex;
+  text-align: center;
+  justify-content: space-evenly;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#contact-page-footer a {
+  color: #96E2ED;
+}
+
+#contact-page-footer a:hover {
+  color: #FBF7F4;
 }
