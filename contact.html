@@ -5,26 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
   <link rel="stylesheet" href="styles.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+/>
 </head>
 <body>
-  <header>
-    <nav>
+  <header id="contact-header">
+    <nav class="contact-nav-bar">
+      <i class="fas fa-bars"></i>
+      <a href="index.html" class="contact-nav-link contact-nav-brand">Simple Conversions</a>
+      <ul class="contact-nav-menu hidden--mobile nav-links" >
+       <li class="contact-nav-item">
+        <a href="index.html" class="contact-nav-link">Homepage</a>
+       </li>
+       <li class="contact-nav-item">
+        <a href="about.html" class="contact-nav-link">About Us</a>
+       </li>
+       <li class="contact-nav-item">
+        <a href="" class="contact-nav-link">Imperial System</a>
+       </li>
+       <li class="contact-nav-item">
+        <a href="" class="contact-nav-link">Metric System</a>
+       </li>
+       <li class="contact-nav-item">
+        <a href="" class="contact-nav-link">Learning Tools</a>
+       </li>
+      </ul>
     </nav>
   </header>
   <main>
     <div class="contact-page-logo">
-    <img src="SimpleConversions/SCNonPhotBlue.png" alt="Simple Conversions">
+    <img src="SimpleConversions/SCButterscotch.png" alt="Simple Conversions">
   </div>
   <div class="contact-us-section">
-    <p>This is a placeholder paragraph. This section will be where users can submit feedback regarding the site, issues or suggestions.
-      There will be a drop down for selecting the type of message that is being sent as well as a text field where users can type.
-    </p>
+    <form action="" method="POST">
+      <div class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Full Name" required>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="your@email.com" required>
+        <label for="issue-type">Contact Reason:</label>
+        <select name="Contact Reason" id="issue-type">
+          <option value="other">Other</option>
+          <option value="issue">Website Issue</option>
+          <option value="suggestion">Suggestion</option>
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="contact-form-message">
+        <label for="issue"></label>
+        <textarea name="msg" id="msg" cols="50" rows="20"></textarea>
+    </div>
+    <div class="subscribe-checkbox">
+      <label for="subscribe">Please Subscribe Me </label>
+      <input type="checkbox" name="subscribe" id="Subscribe" checked >
+    </div>
+    <div class="submit-button">
+        <button type="submit">Submit</button>
+    </div>
   </div>
   </main>
   <footer id="contact-page-footer">
     <a href="index.html">Homepage</a>
     <A href="about.html">About Us</A>
-    <form><input type="button">Subscribe</form>
   </footer>
 </body>
 </html>

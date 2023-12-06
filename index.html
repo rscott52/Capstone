@@ -5,10 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple Conversions</title>
   <link rel="stylesheet" href="styles.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+/>
 </head>
 <body>
-  <header>
-    <nav>
+  <header id="index-header">
+    <nav class="index-nav-bar hidden--mobile nav-links">
+      <a href="index.html" class="index-nav-link index-nav-brand">Simple Conversions</a>
+      <i class="fas fa-bars"></i>
+      <ul class="index-nav-menu">
+       <li class="index-nav-item">
+        <a href="about.html" class="index-nav-link">About Us</a>
+       </li>
+       <li class="index-nav-item">
+        <a href="contact.html" class="index-nav-link">Contact Us</a>
+       </li>
+       <li class="index-nav-item">
+        <a href="" class="index-nav-link">Imperial System</a>
+       </li>
+       <li class="index-nav-item">
+        <a href="" class="index-nav-link">Metric System</a>
+       </li>
+       <li class="index-nav-item">
+        <a href="" class="index-nav-link">Learning Tools</a>
+       </li>
+      </ul>
     </nav>
   </header>
   <main>
@@ -24,7 +47,8 @@
   <footer id="index-page-footer">
     <a href="about.html">About Us</a>
     <a href="contact.html">Contact Us</a>
-    <form><input type="button">Subscribe</form>
+    <button><input type="email" class="input-box" placeholder="User Email">Subscribe!</button>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
