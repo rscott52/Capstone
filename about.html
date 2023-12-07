@@ -5,15 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
   <link rel="stylesheet" href="styles.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+/>
 </head>
 <body>
-  <header>
-    <nav>
+  <header id="about-header">
+    <nav class="about-nav-bar">
+      <a href="index.html" class="about-nav-link about-nav-brand">Simple Conversions</a>
+      <ul class="about-nav-menu hidden--mobile nav-links">
+       <li class="about-nav-item">
+        <a href="index.html" class="about-nav-link">Homepage</a>
+       </li>
+       <li class="about-nav-item">
+        <a href="contact.html" class="about-nav-link">Contact Us</a>
+       </li>
+       <li class="about-nav-item">
+        <a href="" class="about-nav-link">Imperial System</a>
+       </li>
+       <li class="about-nav-item">
+        <a href="" class="about-nav-link">Metric System</a>
+       </li>
+       <li class="about-nav-item">
+        <a href="" class="about-nav-link">Learning Tools</a>
+       </li>
+      </ul>
     </nav>
   </header>
   <main>
     <div class="about-page-logo">
-    <img src="SimpleConversions/SCIsabelline.png" alt="Simple Conversions">
+    <img src="SimpleConversions/SCButterscotch.png" alt="Simple Conversions">
   </div>
   <div class="about-us-section">
     <p>this is a just a placeholder paragraph until I have completed the about me paragraph.
@@ -26,7 +48,7 @@
   <footer id="about-page-footer">
     <A href="index.html">Homepage</A>
     <a href="contact.html">Contact Us</a>
-    <form><input type="button">Subscribe</form>
+    <button><input type="email" class="input-box" placeholder="User Email">Subscribe!</button>
   </footer>
 </body>
 </html>
