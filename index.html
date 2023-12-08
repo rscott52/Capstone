@@ -4,38 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple Conversions</title>
-  <link rel="stylesheet" href="styles.css">
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
 />
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+  <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-  <header id="index-header">
-    <nav class="index-nav-bar hidden--mobile nav-links">
-      <a href="index.html" class="index-nav-link index-nav-brand">Simple Conversions</a>
-      <i class="fas fa-bars"></i>
-      <ul class="index-nav-menu">
-       <li class="index-nav-item">
-        <a href="about.html" class="index-nav-link">About Us</a>
+  <header class="header">
+    <nav class="nav-bar">
+      <Div><a href="index.html" class="brand-title">SimpleConversions</a></Div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+       <li>
+        <a href="about.html" class="nav-link">About Us</a>
        </li>
-       <li class="index-nav-item">
-        <a href="contact.html" class="index-nav-link">Contact Us</a>
+       <li>
+        <a href="contact.html" class="nav-link">Contact Us</a>
        </li>
-       <li class="index-nav-item">
-        <a href="" class="index-nav-link">Imperial System</a>
+       <li>
+        <a href="" class="nav-link">Imperial System</a>
        </li>
-       <li class="index-nav-item">
-        <a href="" class="index-nav-link">Metric System</a>
+       <li>
+        <a href="" class="nav-link">Metric System</a>
        </li>
-       <li class="index-nav-item">
-        <a href="" class="index-nav-link">Learning Tools</a>
+       <li>
+        <a href="" class="nav-link">Learning Tools</a>
        </li>
       </ul>
+    </div>
     </nav>
   </header>
   <main>
-    <div class="homepage-logo">
+    <div class="page-logo">
     <img src="SimpleConversions/SCButterscotch.png" alt="Simple Conversions">
   </div>
   <div class="favorite-system-selector">
@@ -44,7 +55,7 @@
     <H1>Which System Do You Prefer?</H1>
   </div>
   </main>
-  <footer id="index-page-footer">
+  <footer class="footer">
     <a href="about.html">About Us</a>
     <a href="contact.html">Contact Us</a>
     <button><input type="email" class="input-box" placeholder="User Email">Subscribe!</button>
