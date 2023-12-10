@@ -65,6 +65,13 @@
   color: #de8f3f;
 }
 
+.system-preference {
+  font-size: 1rem;
+  text-align: center;
+  color: #de8f3f;
+  margin-top: 3%;
+  }
+
 .index-system-image {
   width: 30%;
   margin-top: 10px;
