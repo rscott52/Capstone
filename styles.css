@@ -65,6 +65,13 @@
   color: #de8f3f;
 }
 
+.system-preference {
+  font-size: 1rem;
+  text-align: center;
+  color: #de8f3f;
+  margin-top: 3%;
+  }
+
 .index-system-image {
   width: 30%;
   margin-top: 10px;
@@ -191,7 +198,7 @@
     display: flex;
   }
   .homepage-logo {
-    width: 50%;
+    width: 75%;
   }
   .contact-form {
     display: flex;
@@ -200,11 +207,17 @@
   .brand-title {
     font-size: 1.6rem;
   }
-
-    .toggle-button {
+.toggle-button {
       right: .5rem;
       top: .25rem;
     }
+.system-preference {
+font-size: .5rem;
+text-align: center;
+color: #de8f3f;
+margin-top: 25%;
+}
+
 }
 
 @media (max-width: 480px) {
