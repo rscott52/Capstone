@@ -153,6 +153,118 @@
   margin-top: 15px;
 }
 
+#learning-tool-page {
+  background:#354F52;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#imperial-system-page {
+  background:#354F52;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.imperial-calculator {
+  width: 25%;
+  height: 300px;
+  background: #FBF7F4;
+  margin: 125px auto 50px;
+}
+
+.imperial-output {
+  width: 25%;
+  height: 300px;
+  background: #FBF7F4;
+  margin: 125px auto 50px;
+}
+
+.imperial-pdf {
+  width: 750px;
+  height: 200px;
+  background: #FBF7F4;
+  margin: 25px auto 50px;
+}
+
+.imperial-system {
+  text-align: center;
+  color: #de8f3f;
+}
+
+.imperial-history {
+  font-size: 1rem;
+  text-align: center;
+  color: #de8f3f;
+  margin-top: 3%;
+  }
+
+  .imperial-history-info {
+    width: 750px;
+    height: 200px;
+    background: #FBF7F4;
+    margin: 50px auto 75px;
+  }
+
+#metric-system-page {
+  background:#354F52;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.metric-calculator {
+  width: 25%;
+  height: 300px;
+  background: #FBF7F4;
+  margin: 125px auto 50px;
+}
+
+.metric-output {
+  width: 25%;
+  height: 300px;
+  background: #FBF7F4;
+  margin: 125px auto 50px;
+}
+
+.metric-pdf {
+  width: 750px;
+  height: 200px;
+  background: #FBF7F4;
+  margin: 25px auto 50px;
+}
+
+.metric-system {
+  text-align: center;
+  color: #de8f3f;
+}
+
+.metric-history {
+  font-size: 1rem;
+  text-align: center;
+  color: #de8f3f;
+  margin-top: 3%;
+  }
+
+  .metric-history-info {
+    width: 750px;
+    height: 200px;
+    background: #FBF7F4;
+    margin: 50px auto 75px;
+  }
+
+#calculator-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.arrow {
+  margin: 200px 75px;
+}
+
 .toggle-button {
   position: absolute;
   top: .50rem;
