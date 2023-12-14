@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Conversions</title>
+  <title>Metric System</title>
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -48,12 +48,37 @@
   <main>
     <div id="calculator-section">
       <div class="metric-calculator">
-        <p>This is a placeholder for the calculator</p>
+        <label for="metric-measurement-type">Measurement Type:</label>
+        <select name="Measurement Type" id="metric-measurement-type">
+          <option value="length">Length</option>
+          <option value="weight">Weight</option>
+          <option value="volume">Volume</option>
+          <option value="area">Area</option>
+          <option value="temperature">Temperature</option>
+        </select>
+        <label for="metric-unit-type">Unit Type:</label>
+        <select name="unit Type" id="metric-unit-type">
+          <option value="length">placeholder</option>
+          <option value="weight">placeholder</option>
+          <option value="volume">placeholder</option>
+          <option value="area">placeholder</option>
+          <option value="temperature">placeholder</option>
+        </select>
+        <p>This is a place holder for where value to be converted is input</p>
+
       </div>
       <div class="arrow">
         <img src="ImperialSystem/arrowButterscotch.png" alt="arrow">
       </div>
       <div class="metric-output">
+        <label for="imperial-output-type">Value Type:</label>
+        <select name="Value Type" id="metric-output-type">
+          <option value="length">placeholder</option>
+          <option value="weight">placeholder</option>
+          <option value="volume">placeholder</option>
+          <option value="area">placeholder</option>
+          <option value="temperature">placeholder</option>
+        </select>
         <p>this is a placeholder for the output section</p>
       </div>
     </div>
