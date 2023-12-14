@@ -170,24 +170,38 @@
 }
 
 .imperial-calculator {
+  color:#de8f3f;
   width: 25%;
-  height: 300px;
-  background: #FBF7F4;
-  margin: 125px auto 50px;
+  height: 25%;
+  margin: 10% auto 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.imperial-calculator p {
+  color: #de8f3f;
+  border: 1px solid #de8f3f;
 }
 
 .imperial-output {
+  color:#de8f3f;
   width: 25%;
-  height: 300px;
-  background: #FBF7F4;
-  margin: 125px auto 50px;
+  height: 25%;
+  margin: 10% auto 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.imperial-output p {
+  color: #de8f3f;
+  border: 1px solid #de8f3f;
 }
 
 .imperial-pdf {
-  width: 750px;
-  height: 200px;
+  width: 50%;
+  height: 50%;
   background: #FBF7F4;
-  margin: 25px auto 50px;
+  margin: 1% auto 5%;
 }
 
 .imperial-system {
@@ -203,10 +217,10 @@
   }
 
   .imperial-history-info {
-    width: 750px;
-    height: 200px;
+    width: 50%;
+    height: 50%;
     background: #FBF7F4;
-    margin: 50px auto 75px;
+    margin: 5% auto 5%;
   }
 
 #metric-system-page {
@@ -217,24 +231,38 @@
   box-sizing: border-box;
 }
 .metric-calculator {
+  color:#de8f3f;
   width: 25%;
-  height: 300px;
-  background: #FBF7F4;
-  margin: 125px auto 50px;
+  height: 25%;
+  margin: 10% auto 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-calculator p {
+  color: #de8f3f;
+  border: 1px solid #de8f3f;
 }
 
 .metric-output {
+  color:#de8f3f;
   width: 25%;
-  height: 300px;
-  background: #FBF7F4;
-  margin: 125px auto 50px;
+  height: 25%;
+  margin: 10% auto 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-output p {
+  color: #de8f3f;
+  border: 1px solid #de8f3f;
 }
 
 .metric-pdf {
-  width: 750px;
-  height: 200px;
+  width: 50%;
+  height: 50%;
   background: #FBF7F4;
-  margin: 25px auto 50px;
+  margin: 1% auto 5%;
 }
 
 .metric-system {
@@ -250,10 +278,10 @@
   }
 
   .metric-history-info {
-    width: 750px;
-    height: 200px;
+    width: 50%;
+    height: 50%;
     background: #FBF7F4;
-    margin: 50px auto 75px;
+    margin: 5% auto 5%;
   }
 
 #calculator-section {
@@ -262,7 +290,8 @@
 }
 
 .arrow {
-  margin: 200px 75px;
+  margin-top: 9%;
+  margin-bottom: 9%;
 }
 
 .toggle-button {
