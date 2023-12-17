@@ -15,12 +15,6 @@
   font-size: 2rem;
   margin: .5rem;
   color:#96E2ED;
-  text-decoration: none;
-  transition: 0.5s ease;
-}
-
-.brand-title:hover {
-  color:#FBF7F4;
 }
 
 .nav-bar {

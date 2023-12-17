@@ -4,5 +4,6 @@ export default [
   { title: "Contact", text: "Contact Us" },
   { title: "Metricsystem", text: "Metric System" },
   { title: "Imperialsystem", text: "US/Imperial System" },
-  { title: "Learningtools", text: "Learning Tools" }
+  { title: "Learningtools", text: "Learning Tools" },
+  { title: "navbar", text: "" }
 ];
