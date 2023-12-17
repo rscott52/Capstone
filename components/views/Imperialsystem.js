@@ -45,7 +45,7 @@ export default () => html`
       </p>
     </div>
     <div class="imperial-system">
-      <img src="${imperialSystem}" />
+      <img class="imperial-img" src="${imperialSystem}" />
     </div>
     <div class="imperial-history">
       <h1>History of The Imperial System</h1>

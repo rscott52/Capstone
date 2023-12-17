@@ -27,7 +27,7 @@ export default () => html`
         <img src="${arrow}" alt="arrow" />
       </div>
       <div class="metric-output">
-        <label for="imperial-output-type">Value Type:</label>
+        <label for="metric-output-type">Value Type:</label>
         <select name="Value Type" id="metric-output-type">
           <option value="length">placeholder</option>
           <option value="weight">placeholder</option>
@@ -45,7 +45,7 @@ export default () => html`
       </p>
     </div>
     <div class="metric-system">
-      <img src="${metricSystem}" alt="Metric System" />
+      <img class="metric-img" src="${metricSystem}" alt="Metric System" />
     </div>
     <div class="metric-history">
       <h1>History of The Metric System</h1>
