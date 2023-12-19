@@ -13,6 +13,17 @@ function render(state = store.Home) {
   `;
 
   router.updatePageLinks();
+  afterRender();
+}
+
+function afterRender() {
+  // This code is for the collapsible navbar
+  const toggleButton = document.getElementsByClassName("toggle-button")[0];
+  const navbarLinks = document.getElementsByClassName("navbar-links")[0];
+
+  toggleButton.addEventListener("click", () => {
+    navbarLinks.classList.toggle("active");
+  });
 }
 
 router
@@ -29,11 +40,3 @@ router
     }
   })
   .resolve();
-
-// This code is for the collapsible navbar
-const toggleButton = document.getElementsByClassName("toggle-button")[0];
-const navbarLinks = document.getElementsByClassName("navbar-links")[0];
-
-toggleButton.addEventListener("click", () => {
-  navbarLinks.classList.toggle("active");
-});
