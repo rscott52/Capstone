@@ -41,10 +41,10 @@ export default () => html`
           <label for="msg"></label>
           <textarea name="msg" id="msg" cols="50" rows="20"></textarea>
         </div>
-        <div class="subscribe-checkbox">
+        <!-- <div class="subscribe-checkbox">
           <label for="subscribe">Please Subscribe Me </label>
           <input type="checkbox" name="subscribe" id="Subscribe" checked />
-        </div>
+        </div> -->
         <div class="submit-button">
           <button type="submit">Submit</button>
         </div>
