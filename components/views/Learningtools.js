@@ -1,5 +1,5 @@
 import html from "html-literal";
 
 export default () => html`
-  <h1>Coming Soon!</h1>
+  <h1 class="in-progress">Coming Soon!</h1>
 `;

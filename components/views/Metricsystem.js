@@ -7,19 +7,19 @@ export default () => html`
       <div class="metric-calculator">
         <label for="metric-measurement-type">Measurement Type:</label>
         <select name="Measurement Type" id="metric-measurement-type">
-          <option value="length">Length</option>
-          <option value="weight">Weight</option>
-          <option value="volume">Volume</option>
-          <option value="area">Area</option>
-          <option value="temperature">Temperature</option>
+          <option value="metric-length">Length</option>
+          <option value="metric-weight">Weight</option>
+          <option value="metric-volume">Volume</option>
+          <option value="metric-area">Area</option>
+          <option value="metric-temperature">Temperature</option>
         </select>
         <label for="metric-unit-type">Unit Type:</label>
         <select name="unit Type" id="metric-unit-type">
-          <option value="length">placeholder</option>
-          <option value="weight">placeholder</option>
-          <option value="volume">placeholder</option>
-          <option value="area">placeholder</option>
-          <option value="temperature">placeholder</option>
+          <option value="metric-input1">placeholder</option>
+          <option value="metric-input2">placeholder</option>
+          <option value="metric-input3">placeholder</option>
+          <option value="metric-input4">placeholder</option>
+          <option value="metric-input5">placeholder</option>
         </select>
         <p>This is a place holder for where value to be converted is input</p>
       </div>
@@ -29,11 +29,11 @@ export default () => html`
       <div class="metric-output">
         <label for="metric-output-type">Value Type:</label>
         <select name="Value Type" id="metric-output-type">
-          <option value="length">placeholder</option>
-          <option value="weight">placeholder</option>
-          <option value="volume">placeholder</option>
-          <option value="area">placeholder</option>
-          <option value="temperature">placeholder</option>
+          <option value="metric-output1">placeholder</option>
+          <option value="metric-output1">placeholder</option>
+          <option value="metric-output1">placeholder</option>
+          <option value="metric-output1">placeholder</option>
+          <option value="metric-output1">placeholder</option>
         </select>
         <p>this is a placeholder for the output section</p>
       </div>
