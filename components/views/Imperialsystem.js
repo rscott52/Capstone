@@ -7,19 +7,19 @@ export default () => html`
       <div class="imperial-calculator">
         <label for="imperial-measurement-type">Measurement Type:</label>
         <select name="Measurement Type" id="imperial-measurement-type">
-          <option value="length">Length</option>
-          <option value="weight">Weight</option>
-          <option value="volume">Volume</option>
-          <option value="area">Area</option>
-          <option value="temperature">Temperature</option>
+          <option value="imperial-length">Length</option>
+          <option value="imperial-weight">Weight</option>
+          <option value="imperial-volume">Volume</option>
+          <option value="imperial-area">Area</option>
+          <option value="imperial-temperature">Temperature</option>
         </select>
         <label for="imperial-unit-type">Unit Type:</label>
         <select name="unit Type" id="imperial-unit-type">
-          <option value="length">placeholder</option>
-          <option value="weight">placeholder</option>
-          <option value="volume">placeholder</option>
-          <option value="area">placeholder</option>
-          <option value="temperature">placeholder</option>
+          <option value="imperial-input1">placeholder</option>
+          <option value="imperial-input2">placeholder</option>
+          <option value="imperial-input3">placeholder</option>
+          <option value="imperial-input4">placeholder</option>
+          <option value="imperial-input5">placeholder</option>
         </select>
         <p>This is a place holder for where value to be converted is input</p>
       </div>
@@ -29,11 +29,11 @@ export default () => html`
       <div class="imperial-output">
         <label for="imperial-output-type">Value Type:</label>
         <select name="Value Type" id="imperial-output-type">
-          <option value="length">placeholder</option>
-          <option value="weight">placeholder</option>
-          <option value="volume">placeholder</option>
-          <option value="area">placeholder</option>
-          <option value="temperature">placeholder</option>
+          <option value="imperial-output1">placeholder</option>
+          <option value="imperial-output2">placeholder</option>
+          <option value="imperial-output3">placeholder</option>
+          <option value="imperial-output4">placeholder</option>
+          <option value="imperial-output5">placeholder</option>
         </select>
         <p>this is a placeholder for the output section</p>
       </div>
