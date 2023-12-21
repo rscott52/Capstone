@@ -102,10 +102,20 @@
 }
 
 .about-us-section {
-  width: 500px;
-  height: 300px;
-  background: #FBF7F4;
+  color:#de8f3f;
+  text-align: center;
+ width: 75%;
   margin: 50px auto 75px;
+}
+
+.about-this-site-links {
+  color:#96E2ED;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+.about-this-site-links:hover {
+  color:#FBF7F4;
 }
 
 #contact-page {
