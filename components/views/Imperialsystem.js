@@ -21,7 +21,7 @@ export default () => html`
           <option value="imperial-input4">placeholder</option>
           <option value="imperial-input5">placeholder</option>
         </select>
-        <p>This is a place holder for where value to be converted is input</p>
+        <br><input type="number"></input>
       </div>
       <div class="arrow">
         <img src="${arrow}" alt="arrow" />
@@ -35,7 +35,7 @@ export default () => html`
           <option value="imperial-output4">placeholder</option>
           <option value="imperial-output5">placeholder</option>
         </select>
-        <p>this is a placeholder for the output section</p>
+        <br><input type="number"></input>
       </div>
     </div>
     <div class="imperial-pdf">
