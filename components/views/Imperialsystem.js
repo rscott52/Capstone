@@ -6,20 +6,20 @@ export default () => html`
     <div id="calculator-section">
       <div class="imperial-calculator">
         <label for="imperial-measurement-type">Measurement Type:</label>
-        <select name="Measurement Type" id="imperial-measurement-type">
-          <option value="imperial-length">Length</option>
-          <option value="imperial-weight">Weight</option>
+        <select id = "imperial1" name="Measurement Type" id="imperial-measurement-type">
+          <option value="imperial-measurement">Select Input</option>
+          <!-- <option value="imperial-weight">Weight</option>
           <option value="imperial-volume">Volume</option>
           <option value="imperial-area">Area</option>
-          <option value="imperial-temperature">Temperature</option>
+          <option value="imperial-temperature">Temperature</option> -->
         </select>
         <label for="imperial-unit-type">Unit Type:</label>
-        <select name="unit Type" id="imperial-unit-type">
-          <option value="imperial-input1">placeholder</option>
-          <option value="imperial-input2">placeholder</option>
+        <select id = "imperial2" name="unit Type" id="imperial-unit-type">
+          <option value="imperial-input">Select input</option>
+          <!-- <option value="imperial-input2">placeholder</option>
           <option value="imperial-input3">placeholder</option>
           <option value="imperial-input4">placeholder</option>
-          <option value="imperial-input5">placeholder</option>
+          <option value="imperial-input5">placeholder</option> -->
         </select>
         <br><input type="number"></input>
       </div>
@@ -28,22 +28,22 @@ export default () => html`
       </div>
       <div class="imperial-output">
         <label for="imperial-output-type">Value Type:</label>
-        <select name="Value Type" id="imperial-output-type">
-          <option value="imperial-output1">placeholder</option>
-          <option value="imperial-output2">placeholder</option>
+        <select id = "imperial3" name="Value Type" id="imperial-output-type">
+          <option value="imperial-output">Select Output</option>
+          <!-- <option value="imperial-output2">placeholder</option>
           <option value="imperial-output3">placeholder</option>
           <option value="imperial-output4">placeholder</option>
-          <option value="imperial-output5">placeholder</option>
+          <option value="imperial-output5">placeholder</option> -->
         </select>
         <br><input type="number"></input>
       </div>
     </div>
-    <div class="imperial-pdf">
+    <!-- <div class="imperial-pdf">
       <p>
         This is a place holder for where a pdf of common conversions will be
         generated based on the unit measurement type selected.
       </p>
-    </div>
+    </div> -->
     <div class="imperial-system">
       <img class="imperial-img" src="${imperialSystem}" />
     </div>
