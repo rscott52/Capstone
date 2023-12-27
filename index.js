@@ -331,6 +331,27 @@ router.hooks({
             done();
           });
         break;
+      case "Metricsystem":
+        axios
+          .get(`https://www.swapi.tech/api/people/1`)
+          .then(response => {
+            store.Metricsystem.swapi = {
+              name: response.data.name,
+              birth_year: response.data.birth_year,
+              eye_color: response.data.eye_color,
+              gender: response.data.gender,
+              hair_color: response.data.hair_color,
+              homeworld: response.data.homeworld,
+              films: response.data.films,
+              species: response.data.species
+            };
+            done();
+          })
+          .catch(error => {
+            console.log(error);
+            done();
+          });
+        break;
       default:
         done();
     }

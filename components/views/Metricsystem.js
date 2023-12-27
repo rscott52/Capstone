@@ -1,7 +1,7 @@
 import html from "html-literal";
 import metricSystem from "../../MetricSystem/MSButterscotch.png";
 import arrow from "../../ImperialSystem/arrowButterscotch.png";
-export default () => html`
+export default state => html`
   <main>
     <div id="calculator-section">
       <div class="metric-calculator">
@@ -38,12 +38,13 @@ export default () => html`
         <br><input id= "metric-input-number" type="number"></input>
       </div>
     </div>
-    <!-- <div class="metric-pdf">
+    <div class="metric-pdf">
+      <h1>Todays Character is ${state.swapi.name}!</h1>
       <p>
-        This is a place holder for where a pdf of common conversions will be
-        generated based on the unit measurement type selected.
-      </p> -->
-    <!-- </div> -->
+      Originating from ${state.swapi.homeworld}, ${state.swapi.name} was born ${state.swapi.birth_year} as a ${state.swapi.gender}
+      ${state.swapi.species} with ${state.swapi.eye_color} eyes and ${state.swapi.hair_color} hair. They can be seen in ${state.swapi.films}.
+      </p>
+    </div>
     <div class="metric-system">
       <img class="metric-img" src="${metricSystem}" alt="Metric System" />
     </div>
