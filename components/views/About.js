@@ -26,8 +26,9 @@ export default () => html`
         is for you! Interested in learning how to read or take a measurement?
         Check out our
         <a class="about-this-site-links" href=${"Learningtools"}
-          >Learning Tools Page</a
-        >! Notice an issue, have a request, or just some good old fashioned
+          >Learning Tools Page!</a
+        >
+        Notice an issue, have a request, or just some good old fashioned
         feedback? Let us know by visiting our
         <a class="about-this-site-links" href=${"Contact"}>Contact Us Page</a>
         and creating a submission. We hope as you utilize this site, you will

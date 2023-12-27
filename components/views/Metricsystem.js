@@ -21,7 +21,7 @@ export default () => html`
           <option value="metric-input4">placeholder</option>
           <option value="metric-input5">placeholder</option> -->
         </select>
-        <br><input type="number"></input>
+        <br><input id= "metric-input-number" type="number"></input>
       </div>
       <div class="arrow">
         <img src="${arrow}" alt="arrow" />
@@ -35,7 +35,7 @@ export default () => html`
           <option value="metric-output1">placeholder</option>
           <option value="metric-output1">placeholder</option> -->
         </select>
-        <br><input type="number"></input>
+        <br><input id= "metric-input-number" type="number"></input>
       </div>
     </div>
     <!-- <div class="metric-pdf">
