@@ -1,4 +1,4 @@
 export default {
-  view: "Metricsystem",
+  view: "Character",
   swapi: {}
 };

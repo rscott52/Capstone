@@ -20,18 +20,18 @@ function render(state = store.Home) {
 function afterRender(state) {
   const toggleButton = document.getElementsByClassName("toggle-button")[0];
   const navbarLinks = document.getElementsByClassName("navbar-links")[0];
-  const metricOne = document.getElementById("metric1");
-  const metricTwo = document.getElementById("metric2");
-  const metricThree = document.getElementById("metric3");
-  let metricInputNumber = document.getElementById("metric-input-number");
-  let metricOutputNumber = document.getElementById("metric-output-number");
+  const inputOne = document.getElementById("input1");
+  const inputTwo = document.getElementById("input2");
+  const output = document.getElementById("output");
+  let inputNumber = document.getElementById("input-number");
+  let outputNumber = document.getElementById("output-number");
 
   // This code is for the collapsible navbar
   toggleButton.addEventListener("click", () => {
     navbarLinks.classList.toggle("active");
   });
   // This is the data object for the metric dropdowns
-  const metricData = {
+  const conversionData = {
     Length: {
       Millimeter: [
         "Centimeter",
@@ -63,18 +63,57 @@ function afterRender(state) {
       Kilometer: [
         "Millimeter",
         "Centimeter",
-        "meter",
+        "Meter",
         "Inch",
         "Foot",
         "Yard",
         "Mile"
+      ],
+      Inch: [
+        "Millimeter",
+        "Centimeter",
+        "Meter",
+        "Kilometer",
+        "Foot",
+        "Yard",
+        "Mile"
+      ],
+      Foot: [
+        "Millimeter",
+        "Centimeter",
+        "Meter",
+        "Kilometer",
+        "Inch",
+        "Yard",
+        "Mile"
+      ],
+      Yard: [
+        "Millimeter",
+        "Centimeter",
+        "Meter",
+        "Kilometer",
+        "Inch",
+        "Foot",
+        "Mile"
+      ],
+      Mile: [
+        "Millimeter",
+        "Centimeter",
+        "Meter",
+        "Kilometer",
+        "Inch",
+        "Foot",
+        "Yard"
       ]
     },
     Weight: {
       Milligram: ["Centigram", "Gram", "Kilogram", "Ounce", "Pound", "Ton"],
       Centigram: ["Milligram", "Gram", "Kilogram", "Ounce", "Pound", "Ton"],
       Gram: ["Milligram", "Centigram", "Kilogram", "Ounce", "Pound", "Ton"],
-      Kilogram: ["Milligram", "Centigram", "Gram", "Ounce", "Pound", "Ton"]
+      Kilogram: ["Milligram", "Centigram", "Gram", "Ounce", "Pound", "Ton"],
+      Ounce: ["Milligram", "Centigram", "Gram", "Kilogram", "Pound", "Ton"],
+      Pound: ["Milligram", "Centigram", "Gram", "Kilogram", "Ounce", "Ton"],
+      Ton: ["Milligram", "Centigram", "Gram", "Kilogram", "Ounce", "Pound"]
     },
     Volume: {},
     Area: {
@@ -127,679 +166,751 @@ function afterRender(state) {
         "Square Foot",
         "Square Mile",
         "Acre"
+      ],
+      SquareInch: [
+        "Square Millimeter",
+        "Square Centimeter",
+        "Square Meter",
+        "Square Kilometer",
+        "Hectare",
+        "Square Foot",
+        "Square Mile",
+        "Acre"
+      ],
+      SquareFoot: [
+        "Square Millimeter",
+        "Square Centimeter",
+        "Square Meter",
+        "Square Kilometer",
+        "Hectare",
+        "Square Inch",
+        "Square Mile",
+        "Acre"
+      ],
+      SquareMile: [
+        "Square Millimeter",
+        "Square Centimeter",
+        "Square Meter",
+        "Square Kilometer",
+        "Hectare",
+        "Square Inch",
+        "Square Foot",
+        "Acre"
+      ],
+      Acre: [
+        "Square Millimeter",
+        "Square Centimeter",
+        "Square Meter",
+        "Square Kilometer",
+        "Hectare",
+        "Square Inch",
+        "Square Foot",
+        "Square Mile"
       ]
     },
     Temperature: {
-      Celsius: ["Fahrenheit", "Kelvin"]
+      Celsius: ["Fahrenheit", "Kelvin"],
+      Fahrenheit: ["Celsius", "Kelvin"],
+      Kelvin: ["Celsius", "Fahrenheit"]
     }
   };
-  // // This is the data object for the imperial dropdowns
-  // const imperialData = {
-  //   Length: {
-  //     Inch: [
-  //       "Millimeter",
-  //       "Centimeter",
-  //       "Meter",
-  //       "Kilometer",
-  //       "Foot",
-  //       "Yard",
-  //       "Mile"
-  //     ],
-  //     Foot: [
-  //       "Millimeter",
-  //       "Centimeter",
-  //       "Meter",
-  //       "Kilometer",
-  //       "Inch",
-  //       "Yard",
-  //       "Mile"
-  //     ],
-  //     Yard: [
-  //       "Millimeter",
-  //       "Centimeter",
-  //       "Meter",
-  //       "Kilometer",
-  //       "Inch",
-  //       "Foot",
-  //       "Mile"
-  //     ],
-  //     Mile: [
-  //       "Millimeter",
-  //       "Centimeter",
-  //       "meter",
-  //       "Kilometer",
-  //       "Inch",
-  //       "Foot",
-  //       "Yard"
-  //     ]
-  //   },
-  //   Weight: {
-  //     Ounce: ["Milligram", "Centigram", "Gram", "Kilogram", "Pound", "Ton"],
-  //     Pound: ["Milligram", "Centigram", "Gram", "Kilogram", "Ounce", "Ton"],
-  //     Ton: ["Milligram", "Centigram", "Gram", "Kilogram", "Ounce", "Pound"]
-  //   },
-  //   Volume: {},
-  //   Area: {
-  //     SquareInch: [
-  //       "Square Millimeter",
-  //       "Square Centimeter",
-  //       "Square Meter",
-  //       "Square Kilometer",
-  //       "Hectare",
-  //       "Square Foot",
-  //       "Square Mile",
-  //       "Acre"
-  //     ],
-  //     SquareFoot: [
-  //       "Square Millimeter",
-  //       "Square Centimeter",
-  //       "Square Meter",
-  //       "Square Kilometer",
-  //       "Hectare",
-  //       "Square Inch",
-  //       "Square Mile",
-  //       "Acre"
-  //     ],
-  //     SquareMile: [
-  //       "Square Millimeter",
-  //       "Square Centimeter",
-  //       "Square Meter",
-  //       "Square Kilometer",
-  //       "Hectare",
-  //       "Square Inch",
-  //       "Square Foot",
-  //       "Acre"
-  //     ],
-  //     Acre: [
-  //       "Square Millimeter",
-  //       "Square Centimeter",
-  //       "Square Meter",
-  //       "Square Kilometer",
-  //       "Hectare",
-  //       "Square Inch",
-  //       "Square Foot",
-  //       "Square Mile"
-  //     ]
-  //   },
-  //   Temperature: {
-  //     Fahrenheit: ["Metric", "Kelvin"]
-  //   }
-  // };
   // This is the function for the cascading metric dropdown lists
-  function cascadingMetricData() {
-    for (const metricMeasurementType in metricData) {
-      metricOne.options[metricOne.options.length] = new Option(
-        metricMeasurementType
+  function cascadingConversionData() {
+    for (const converisonMeasurementType in conversionData) {
+      inputOne.options[inputOne.options.length] = new Option(
+        converisonMeasurementType
       );
     }
 
-    metricOne.onchange = function() {
-      metricTwo.length = 1;
-      metricThree.length = 1;
-      for (const metricUnitType in metricData[this.value]) {
-        metricTwo.options[metricTwo.options.length] = new Option(
-          metricUnitType
+    inputOne.onchange = function() {
+      inputTwo.length = 1;
+      output.length = 1;
+      for (const conversionUnitType in conversionData[this.value]) {
+        inputTwo.options[inputTwo.options.length] = new Option(
+          conversionUnitType
         );
       }
     };
-    metricTwo.onchange = function() {
-      metricThree.length = 1;
+    inputTwo.onchange = function() {
+      output.length = 1;
 
-      const metricOutputType = metricData[metricOne.value][this.value];
+      const conversionOutputType = conversionData[inputOne.value][this.value];
 
-      for (let i = 0; i < metricOutputType.length; i++) {
-        metricThree.options[metricThree.options.length] = new Option(
-          metricOutputType[i]
+      for (let i = 0; i < conversionOutputType.length; i++) {
+        output.options[output.options.length] = new Option(
+          conversionOutputType[i]
         );
       }
     };
 
     // Adds event listeners to the variables
-    metricInputNumber.addEventListener("keyup", metricResultValue);
-    metricInputNumber.addEventListener("click", metricResultValue);
-    metricOne.addEventListener("change", metricResultValue);
-    metricTwo.addEventListener("change", metricResultValue);
-    metricThree.addEventListener("change", metricResultValue);
+    inputNumber.addEventListener("keyup", conversionResultValue);
+    inputNumber.addEventListener("click", conversionResultValue);
+    inputOne.addEventListener("change", conversionResultValue);
+    inputTwo.addEventListener("change", conversionResultValue);
+    output.addEventListener("change", conversionResultValue);
 
     // Actual Conversion Function
-    function metricResultValue() {
+    function conversionResultValue() {
       // If..Else If statements for Length Conversions
 
       // Else If statements for Millimeter Conversions
-      if (
-        metricTwo.value === "Millimeter" &&
-        metricThree.value === "Centimeter"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 10;
+      if (inputTwo.value === "Millimeter" && output.value === "Centimeter") {
+        outputNumber.value = Number(inputNumber.value) / 10;
+      } else if (inputTwo.value === "Millimeter" && output.value === "Meter") {
+        outputNumber.value = Number(inputNumber.value) / 1000;
       } else if (
-        metricTwo.value === "Millimeter" &&
-        metricThree.value === "Meter"
+        inputTwo.value === "Millimeter" &&
+        output.value === "Kilometer"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1000;
-      } else if (
-        metricTwo.value === "Millimeter" &&
-        metricThree.value === "Kilometer"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1000000;
-      } else if (
-        metricTwo.value === "Millimeter" &&
-        metricThree.value === "Inch"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 25.4;
-      } else if (
-        metricTwo.value === "Millimeter" &&
-        metricThree.value === "Foot"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 304.8;
-      } else if (
-        metricTwo.value === "Millimeter" &&
-        metricThree.value === "Yard"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 914.4;
-      } else if (
-        metricTwo.value === "Millimeter" &&
-        metricThree.value === "Mile"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1609344;
+        outputNumber.value = Number(inputNumber.value) / 1000000;
+      } else if (inputTwo.value === "Millimeter" && output.value === "Inch") {
+        outputNumber.value = Number(inputNumber.value) / 25.4;
+      } else if (inputTwo.value === "Millimeter" && output.value === "Foot") {
+        outputNumber.value = Number(inputNumber.value) / 304.8;
+      } else if (inputTwo.value === "Millimeter" && output.value === "Yard") {
+        outputNumber.value = Number(inputNumber.value) / 914.4;
+      } else if (inputTwo.value === "Millimeter" && output.value === "Mile") {
+        outputNumber.value = Number(inputNumber.value) / 1609344;
       }
 
       // Else If statements for Centimeter Conversions
       else if (
-        metricTwo.value === "Centimeter" &&
-        metricThree.value === "Millimeter"
+        inputTwo.value === "Centimeter" &&
+        output.value === "Millimeter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) * 10;
+        outputNumber.value = Number(inputNumber.value) * 10;
+      } else if (inputTwo.value === "Centimeter" && output.value === "Meter") {
+        outputNumber.value = Number(inputNumber.value) / 100;
       } else if (
-        metricTwo.value === "Centimeter" &&
-        metricThree.value === "Meter"
+        inputTwo.value === "Centimeter" &&
+        output.value === "Kilometer"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 100;
-      } else if (
-        metricTwo.value === "Centimeter" &&
-        metricThree.value === "Kilometer"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 100000;
-      } else if (
-        metricTwo.value === "Centimeter" &&
-        metricThree.value === "Inch"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 2.54;
-      } else if (
-        metricTwo.value === "Centimeter" &&
-        metricThree.value === "Foot"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 30.48;
-      } else if (
-        metricTwo.value === "Centimeter" &&
-        metricThree.value === "Yard"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 91.44;
-      } else if (
-        metricTwo.value === "Centimeter" &&
-        metricThree.value === "Mile"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 160934.4;
+        outputNumber.value = Number(inputNumber.value) / 100000;
+      } else if (inputTwo.value === "Centimeter" && output.value === "Inch") {
+        outputNumber.value = Number(inputNumber.value) / 2.54;
+      } else if (inputTwo.value === "Centimeter" && output.value === "Foot") {
+        outputNumber.value = Number(inputNumber.value) / 30.48;
+      } else if (inputTwo.value === "Centimeter" && output.value === "Yard") {
+        outputNumber.value = Number(inputNumber.value) / 91.44;
+      } else if (inputTwo.value === "Centimeter" && output.value === "Mile") {
+        outputNumber.value = Number(inputNumber.value) / 160934.4;
       }
 
       // Else If statements for Meter Conversions
-      else if (
-        metricTwo.value === "Meter" &&
-        metricThree.value === "Millimeter"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) * 1000;
-      } else if (
-        metricTwo.value === "Meter" &&
-        metricThree.value === "Centimeter"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) * 10;
-      } else if (
-        metricTwo.value === "Meter" &&
-        metricThree.value === "Kilometer"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1000;
-      } else if (metricTwo.value === "Meter" && metricThree.value === "Inch") {
-        metricOutputNumber.value = Number(metricInputNumber.value) * 39.3701;
-      } else if (metricTwo.value === "Meter" && metricThree.value === "Foot") {
-        metricOutputNumber.value = Number(metricInputNumber.value) * 3.28084;
-      } else if (metricTwo.value === "Meter" && metricThree.value === "Yard") {
-        metricOutputNumber.value = Number(metricInputNumber.value) * 1.09361;
-      } else if (metricTwo.value === "Meter" && metricThree.value === "Mile") {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1609.344;
+      else if (inputTwo.value === "Meter" && output.value === "Millimeter") {
+        outputNumber.value = Number(inputNumber.value) * 1000;
+      } else if (inputTwo.value === "Meter" && output.value === "Centimeter") {
+        outputNumber.value = Number(inputNumber.value) * 100;
+      } else if (inputTwo.value === "Meter" && output.value === "Kilometer") {
+        outputNumber.value = Number(inputNumber.value) / 1000;
+      } else if (inputTwo.value === "Meter" && output.value === "Inch") {
+        outputNumber.value = Number(inputNumber.value) * 39.37;
+      } else if (inputTwo.value === "Meter" && output.value === "Foot") {
+        outputNumber.value = Number(inputNumber.value) * 3.28;
+      } else if (inputTwo.value === "Meter" && output.value === "Yard") {
+        outputNumber.value = Number(inputNumber.value) * 1.09;
+      } else if (inputTwo.value === "Meter" && output.value === "Mile") {
+        outputNumber.value = Number(inputNumber.value) / 1609.34;
       }
 
       // Else If statements for Kilometer Conversions
       else if (
-        metricTwo.value === "Kilometer" &&
-        metricThree.value === "Millimeter"
+        inputTwo.value === "Kilometer" &&
+        output.value === "Millimeter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1609.344;
+        outputNumber.value = Number(inputNumber.value) * 1000000;
       } else if (
-        metricTwo.value === "Kilometer" &&
-        metricThree.value === "Centimeter"
+        inputTwo.value === "Kilometer" &&
+        output.value === "Centimeter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1609.344;
-      } else if (
-        metricTwo.value === "Kilometer" &&
-        metricThree.value === "Meter"
+        outputNumber.value = Number(inputNumber.value) * 100000;
+      } else if (inputTwo.value === "Kilometer" && output.value === "Meter") {
+        outputNumber.value = Number(inputNumber.value) * 1000;
+      } else if (inputTwo.value === "Kilometer" && output.value === "Inch") {
+        outputNumber.value = Number(inputNumber.value) * 39370.08;
+      } else if (inputTwo.value === "Kilometer" && output.value === "Foot") {
+        outputNumber.value = Number(inputNumber.value) * 3280.84;
+      } else if (inputTwo.value === "Kilometer" && output.value === "Yard") {
+        outputNumber.value = Number(inputNumber.value) * 1093.61;
+      } else if (inputTwo.value === "Kilometer" && output.value === "Mile") {
+        outputNumber.value = Number(inputNumber.value) / 1.609;
+      }
+
+      // Else If statements for Inch Conversions
+      else if (
+        inputTwo.value === "Inch" &&
+        outputNumber.value === "Millimeter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1609.344;
-      } else if (
-        metricTwo.value === "Kilometer" &&
-        metricThree.value === "Inch"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1609.344;
-      } else if (
-        metricTwo.value === "Kilometer" &&
-        metricThree.value === "Foot"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1609.344;
-      } else if (
-        metricTwo.value === "Kilometer" &&
-        metricThree.value === "Yard"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1609.344;
-      } else if (
-        metricTwo.value === "Kilometer" &&
-        metricThree.value === "Mile"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1609.344;
+        outputNumber.value = Number(inputNumber.value) * 25.4;
+      } else if (inputTwo.value === "Inch" && output.value === "Centimeter") {
+        outputNumber.value = Number(inputNumber.value) * 2.54;
+      } else if (inputTwo.value === "Inch" && output.value === "Meter") {
+        outputNumber.value = Number(inputNumber.value) / 39.37;
+      } else if (inputTwo.value === "Inch" && output.value === "Kilometer") {
+        outputNumber.value = Number(inputNumber.value) / 39370.08;
+      } else if (inputTwo.value === "Inch" && output.value === "Foot") {
+        outputNumber.value = Number(inputNumber.value) / 12;
+      } else if (inputTwo.value === "Inch" && output.value === "Yard") {
+        outputNumber.value = Number(inputNumber.value) / 36;
+      } else if (inputTwo.value === "Inch" && output.value === "Mile") {
+        outputNumber.value = Number(inputNumber.value) / 63360;
+      }
+
+      // Else If statements for Foot Conversions
+      else if (inputTwo.value === "Foot" && output.value === "Millimeter") {
+        outputNumber.value = Number(inputNumber.value) * 304.8;
+      } else if (inputTwo.value === "Foot" && output.value === "Centimeter") {
+        outputNumber.value = Number(inputNumber.value) * 30.48;
+      } else if (inputTwo.value === "Foot" && output.value === "Meter") {
+        outputNumber.value = Number(inputNumber.value) / 3.281;
+      } else if (inputTwo.value === "Foot" && output.value === "Kilometer") {
+        outputNumber.value = Number(inputNumber.value) / 3280.84;
+      } else if (inputTwo.value === "Foot" && output.value === "Inch") {
+        outputNumber.value = Number(inputNumber.value) * 12;
+      } else if (inputTwo.value === "Foot" && output.value === "Yard") {
+        outputNumber.value = Number(inputNumber.value) / 3;
+      } else if (inputTwo.value === "Foot" && output.value === "Mile") {
+        outputNumber.value = Number(inputNumber.value) / 5280;
+      }
+
+      // Else If statements for Yard Conversions
+      else if (inputTwo.value === "Yard" && output.value === "Millimeter") {
+        outputNumber.value = Number(inputNumber.value) * 914.4;
+      } else if (inputTwo.value === "Yard" && output.value === "Centimeter") {
+        outputNumber.value = Number(inputNumber.value) * 91.44;
+      } else if (inputTwo.value === "Yard" && output.value === "Meter") {
+        outputNumber.value = Number(inputNumber.value) * 0.9144;
+      } else if (inputTwo.value === "Yard" && output.value === "Kilometer") {
+        outputNumber.value = Number(inputNumber.value) * 0.000914;
+      } else if (inputTwo.value === "Yard" && output.value === "Inch") {
+        outputNumber.value = Number(inputNumber.value) * 36;
+      } else if (inputTwo.value === "Yard" && output.value === "Foot") {
+        outputNumber.value = Number(inputNumber.value) * 3;
+      } else if (inputTwo.value === "Yard" && output.value === "Mile") {
+        outputNumber.value = Number(inputNumber.value) / 1760;
+      }
+
+      // Else If statements for Mile Conversions
+      else if (inputTwo.value === "Mile" && output.value === "Millimeter") {
+        outputNumber.value = Number(inputNumber.value) * 1609344;
+      } else if (inputTwo.value === "Mile" && output.value === "Centimeter") {
+        outputNumber.value = Number(inputNumber.value) * 160934.4;
+      } else if (inputTwo.value === "Mile" && output.value === "Meter") {
+        outputNumber.value = Number(inputNumber.value) * 1609.34;
+      } else if (inputTwo.value === "Mile" && output.value === "Kilometer") {
+        outputNumber.value = Number(inputNumber.value) * 1.60934;
+      } else if (inputTwo.value === "Mile" && output.value === "Inch") {
+        outputNumber.value = Number(inputNumber.value) * 63360;
+      } else if (inputTwo.value === "Mile" && output.value === "Foot") {
+        outputNumber.value = Number(inputNumber.value) * 5280;
+      } else if (inputTwo.value === "Mile" && output.value === "Yard") {
+        outputNumber.value = Number(inputNumber.value) * 1760;
       }
 
       // Else If Statements for Weight Conversions
 
       // Else If Statements for Milligram Conversions
-      else if (
-        metricTwo.value === "Milligram" &&
-        metricThree.value === "Centigram"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1;
+      else if (inputTwo.value === "Milligram" && output.value === "Centigram") {
+        outputNumber.value = Number(inputNumber.value) / 10;
+      } else if (inputTwo.value === "Milligram" && output.value === "Gram") {
+        outputNumber.value = Number(inputNumber.value) / 1000;
       } else if (
-        metricTwo.value === "Milligram" &&
-        metricThree.value === "Gram"
+        inputTwo.value === "Milligram" &&
+        output.value === "Kilogram"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 2;
-      } else if (
-        metricTwo.value === "Milligram" &&
-        metricThree.value === "Kilogram"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 3;
-      } else if (
-        metricTwo.value === "Milligram" &&
-        metricThree.value === "Ounce"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 4;
-      } else if (
-        metricTwo.value === "Milligram" &&
-        metricThree.value === "Pound"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 5;
-      } else if (
-        metricTwo.value === "Milligram" &&
-        metricThree.value === "Ton"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 6;
+        outputNumber.value = Number(inputNumber.value) / 1000000;
+      } else if (inputTwo.value === "Milligram" && output.value === "Ounce") {
+        outputNumber.value = Number(inputNumber.value) / 28349.5231;
+      } else if (inputTwo.value === "Milligram" && output.value === "Pound") {
+        outputNumber.value = Number(inputNumber.value) / 453592.37;
+      } else if (inputTwo.value === "Milligram" && output.value === "Ton") {
+        outputNumber.value = Number(inputNumber.value) / 907184740;
       }
 
       // Else If Statements for Centigram Conversions
-      else if (
-        metricTwo.value === "Centigram" &&
-        metricThree.value === "Milligram"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1;
+      else if (inputTwo.value === "Centigram" && output.value === "Milligram") {
+        outputNumber.value = Number(inputNumber.value) * 10;
+      } else if (inputTwo.value === "Centigram" && output.value === "Gram") {
+        outputNumber.value = Number(inputNumber.value) / 100;
       } else if (
-        metricTwo.value === "Centigram" &&
-        metricThree.value === "Gram"
+        inputTwo.value === "Centigram" &&
+        output.value === "Kilogram"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 2;
-      } else if (
-        metricTwo.value === "Centigram" &&
-        metricThree.value === "Kilogram"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 3;
-      } else if (
-        metricTwo.value === "Centigram" &&
-        metricThree.value === "Ounce"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 4;
-      } else if (
-        metricTwo.value === "Centigram" &&
-        metricThree.value === "Pound"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 5;
-      } else if (
-        metricTwo.value === "Centigram" &&
-        metricThree.value === "Ton"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 6;
+        outputNumber.value = Number(inputNumber.value) / 100000;
+      } else if (inputTwo.value === "Centigram" && output.value === "Ounce") {
+        outputNumber.value = Number(inputNumber.value) / 2834.95231;
+      } else if (inputTwo.value === "Centigram" && output.value === "Pound") {
+        outputNumber.value = Number(inputNumber.value) / 45359.237;
+      } else if (inputTwo.value === "Centigram" && output.value === "Ton") {
+        outputNumber.value = Number(inputNumber.value) / 90718474;
       }
 
       // Else If Statements for Gram Conversions
-      else if (
-        metricTwo.value === "Gram" &&
-        metricThree.value === "Milligram"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1;
-      } else if (
-        metricTwo.value === "Gram" &&
-        metricThree.value === "Centigram"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 2;
-      } else if (
-        metricTwo.value === "Gram" &&
-        metricThree.value === "Kilogram"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 3;
-      } else if (metricTwo.value === "Gram" && metricThree.value === "Ounce") {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 4;
-      } else if (metricTwo.value === "Gram" && metricThree.value === "Pound") {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 5;
-      } else if (metricTwo.value === "Gram" && metricThree.value === "Ton") {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 6;
+      else if (inputTwo.value === "Gram" && output.value === "Milligram") {
+        outputNumber.value = Number(inputNumber.value) * 1000;
+      } else if (inputTwo.value === "Gram" && output.value === "Centigram") {
+        outputNumber.value = Number(inputNumber.value) * 100;
+      } else if (inputTwo.value === "Gram" && output.value === "Kilogram") {
+        outputNumber.value = Number(inputNumber.value) / 1000;
+      } else if (inputTwo.value === "Gram" && output.value === "Ounce") {
+        outputNumber.value = Number(inputNumber.value) / 28.34952;
+      } else if (inputTwo.value === "Gram" && output.value === "Pound") {
+        outputNumber.value = Number(inputNumber.value) / 453.592;
+      } else if (inputTwo.value === "Gram" && output.value === "Ton") {
+        outputNumber.value = Number(inputNumber.value) / 907184.74;
       }
 
       // Else If Statements for Kilogram Conversions
-      else if (
-        metricTwo.value === "Kilogram" &&
-        metricThree.value === "Milligram"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1;
+      else if (inputTwo.value === "Kilogram" && output.value === "Milligram") {
+        outputNumber.value = Number(inputNumber.value) * 1000000;
       } else if (
-        metricTwo.value === "Kilogram" &&
-        metricThree.value === "Centigram"
+        inputTwo.value === "Kilogram" &&
+        output.value === "Centigram"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 2;
-      } else if (
-        metricTwo.value === "Kilogram" &&
-        metricThree.value === "Gram"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 3;
-      } else if (
-        metricTwo.value === "Kilogram" &&
-        metricThree.value === "Ounce"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 4;
-      } else if (
-        metricTwo.value === "Kilogram" &&
-        metricThree.value === "Pound"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 5;
-      } else if (
-        metricTwo.value === "Kilogram" &&
-        metricThree.value === "Ton"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 6;
+        outputNumber.value = Number(inputNumber.value) * 100000;
+      } else if (inputTwo.value === "Kilogram" && output.value === "Gram") {
+        outputNumber.value = Number(inputNumber.value) * 1000;
+      } else if (inputTwo.value === "Kilogram" && output.value === "Ounce") {
+        outputNumber.value = Number(inputNumber.value) * 35.27396195;
+      } else if (inputTwo.value === "Kilogram" && output.value === "Pound") {
+        outputNumber.value = Number(inputNumber.value) * 2.2046226218;
+      } else if (inputTwo.value === "Kilogram" && output.value === "Ton") {
+        outputNumber.value = Number(inputNumber.value) / 907.18474;
+      }
+
+      // Else If Statements for Ounce Conversions
+      else if (inputTwo.value === "Ounce" && output.value === "Milligram") {
+        outputNumber.value = Number(inputNumber.value) * 28349.5231;
+      } else if (inputTwo.value === "Ounce" && output.value === "Centigram") {
+        outputNumber.value = Number(inputNumber.value) * 2834.95231;
+      } else if (inputTwo.value === "Ounce" && output.value === "Gram") {
+        outputNumber.value = Number(inputNumber.value) * 28.34952;
+      } else if (inputTwo.value === "Ounce" && output.value === "Kilogram") {
+        outputNumber.value = Number(inputNumber.value) / 35.27396195;
+      } else if (inputTwo.value === "Ounce" && output.value === "Pound") {
+        outputNumber.value = Number(inputNumber.value) / 16;
+      } else if (inputTwo.value === "Ounce" && output.value === "Ton") {
+        outputNumber.value = Number(inputNumber.value) / 32000;
+      }
+
+      // Else If Statements for Pound Conversions
+      else if (inputTwo.value === "Pound" && output.value === "Milligram") {
+        outputNumber.value = Number(inputNumber.value) * 453592.37;
+      } else if (inputTwo.value === "Pound" && output.value === "Centigram") {
+        outputNumber.value = Number(inputNumber.value) * 45359.237;
+      } else if (inputTwo.value === "Pound" && output.value === "Gram") {
+        outputNumber.value = Number(inputNumber.value) * 453.592;
+      } else if (inputTwo.value === "Pound" && output.value === "Kilogram") {
+        outputNumber.value = Number(inputNumber.value) / 2.2046226218;
+      } else if (inputTwo.value === "Pound" && output.value === "Ounce") {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (inputTwo.value === "Pound" && output.value === "Ton") {
+        outputNumber.value = Number(inputNumber.value) / 2000;
+      }
+
+      // Else If Statements for Ton Conversions
+      else if (inputTwo.value === "Ton" && output.value === "Milligram") {
+        outputNumber.value = Number(inputNumber.value) * 907184740;
+      } else if (inputTwo.value === "Ton" && output.value === "Centigram") {
+        outputNumber.value = Number(inputNumber.value) * 90718474;
+      } else if (inputTwo.value === "Ton" && output.value === "Gram") {
+        outputNumber.value = Number(inputNumber.value) * 907184.74;
+      } else if (inputTwo.value === "Ton" && output.value === "Kilogram") {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (inputTwo.value === "Ton" && output.value === "Ounce") {
+        outputNumber.value = Number(inputNumber.value) * 32000;
+      } else if (inputTwo.value === "Ton" && output.value === "Pound") {
+        outputNumber.value = Number(inputNumber.value) * 2000;
       }
 
       // Else If Statements for Area Conversions
 
       //Else If Statement for SquareMillimeter Conversions
       else if (
-        metricTwo.value === "SquareMillimeter" &&
-        metricThree.value === "Square Centimeter"
+        inputTwo.value === "SquareMillimeter" &&
+        output.value === "Square Centimeter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1;
+        outputNumber.value = Number(inputNumber.value) / 100;
       } else if (
-        metricTwo.value === "SquareMillimeter" &&
-        metricThree.value === "Square Meter"
+        inputTwo.value === "SquareMillimeter" &&
+        output.value === "Square Meter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 2;
+        outputNumber.value = Number(inputNumber.value) / 1000000;
       } else if (
-        metricTwo.value === "SquareMillimeter" &&
-        metricThree.value === "Square Kilometer"
+        inputTwo.value === "SquareMillimeter" &&
+        output.value === "Square Kilometer"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 3;
+        outputNumber.value = Number(inputNumber.value) / 1000000000000;
       } else if (
-        metricTwo.value === "SquareMillimeter" &&
-        metricThree.value === "Hectare"
+        inputTwo.value === "SquareMillimeter" &&
+        output.value === "Hectare"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 4;
+        outputNumber.value = Number(inputNumber.value) / 10000000000;
       } else if (
-        metricTwo.value === "SquareMillimeter" &&
-        metricThree.value === "Square Inch"
+        inputTwo.value === "SquareMillimeter" &&
+        output.value === "Square Inch"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 5;
+        outputNumber.value = Number(inputNumber.value) / 645.16;
       } else if (
-        metricTwo.value === "SquareMillimeter" &&
-        metricThree.value === "Square Foot"
+        inputTwo.value === "SquareMillimeter" &&
+        output.value === "Square Foot"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 6;
+        outputNumber.value = Number(inputNumber.value) / 92903.04;
       } else if (
-        metricTwo.value === "SquareMillimeter" &&
-        metricThree.value === "Square Mile"
+        inputTwo.value === "SquareMillimeter" &&
+        output.value === "Square Mile"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 7;
+        outputNumber.value = Number(inputNumber.value) / 2589988110000;
       } else if (
-        metricTwo.value === "SquareMillimeter" &&
-        metricThree.value === "Acre"
+        inputTwo.value === "SquareMillimeter" &&
+        output.value === "Acre"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 8;
+        outputNumber.value = Number(inputNumber.value) / 4046856422.4;
       }
 
       //Else If Statement for SquareCentimeter Conversions
       else if (
-        metricTwo.value === "SquareCentimeter" &&
-        metricThree.value === "Square Millimeter"
+        inputTwo.value === "SquareCentimeter" &&
+        output.value === "Square Millimeter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1;
+        outputNumber.value = Number(inputNumber.value) * 100;
       } else if (
-        metricTwo.value === "SquareCentimeter" &&
-        metricThree.value === "Square Meter"
+        inputTwo.value === "SquareCentimeter" &&
+        output.value === "Square Meter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 2;
+        outputNumber.value = Number(inputNumber.value) / 10000;
       } else if (
-        metricTwo.value === "SquareCentimeter" &&
-        metricThree.value === "Square Kilometer"
+        inputTwo.value === "SquareCentimeter" &&
+        output.value === "Square Kilometer"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 3;
+        outputNumber.value = Number(inputNumber.value) / 10000000000;
       } else if (
-        metricTwo.value === "SquareCentimeter" &&
-        metricThree.value === "Hectare"
+        inputTwo.value === "SquareCentimeter" &&
+        output.value === "Hectare"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 4;
+        outputNumber.value = Number(inputNumber.value) / 100000000;
       } else if (
-        metricTwo.value === "SquareCentimeter" &&
-        metricThree.value === "Square Inch"
+        inputTwo.value === "SquareCentimeter" &&
+        output.value === "Square Inch"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 5;
+        outputNumber.value = Number(inputNumber.value) / 6.4516;
       } else if (
-        metricTwo.value === "SquareCentimeter" &&
-        metricThree.value === "Square Foot"
+        inputTwo.value === "SquareCentimeter" &&
+        output.value === "Square Foot"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 6;
+        outputNumber.value = Number(inputNumber.value) / 929.0304;
       } else if (
-        metricTwo.value === "SquareCentimeter" &&
-        metricThree.value === "Square Mile"
+        inputTwo.value === "SquareCentimeter" &&
+        output.value === "Square Mile"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 7;
+        outputNumber.value = Number(inputNumber.value) / 25899881100;
       } else if (
-        metricTwo.value === "SquareCentimeter" &&
-        metricThree.value === "Acre"
+        inputTwo.value === "SquareCentimeter" &&
+        output.value === "Acre"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 8;
+        outputNumber.value = Number(inputNumber.value) / 40460564.224;
       }
 
       //Else If Statement for SquareMeter Conversions
       else if (
-        metricTwo.value === "SquareMeter" &&
-        metricThree.value === "Square Millimeter"
+        inputTwo.value === "SquareMeter" &&
+        output.value === "Square Millimeter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1;
+        outputNumber.value = Number(inputNumber.value) * 1000000;
       } else if (
-        metricTwo.value === "SquareMeter" &&
-        metricThree.value === "Square Centimeter"
+        inputTwo.value === "SquareMeter" &&
+        output.value === "Square Centimeter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 2;
+        outputNumber.value = Number(inputNumber.value) * 10000;
       } else if (
-        metricTwo.value === "SquareMeter" &&
-        metricThree.value === "Square Kilometer"
+        inputTwo.value === "SquareMeter" &&
+        output.value === "Square Kilometer"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 3;
+        outputNumber.value = Number(inputNumber.value) / 1000000;
       } else if (
-        metricTwo.value === "SquareMeter" &&
-        metricThree.value === "Hectare"
+        inputTwo.value === "SquareMeter" &&
+        output.value === "Hectare"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 4;
+        outputNumber.value = Number(inputNumber.value) / 10000;
       } else if (
-        metricTwo.value === "SquareMeter" &&
-        metricThree.value === "Square Inch"
+        inputTwo.value === "SquareMeter" &&
+        output.value === "Square Inch"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 5;
+        outputNumber.value = Number(inputNumber.value) * 1550.0031;
       } else if (
-        metricTwo.value === "SquareMeter" &&
-        metricThree.value === "Square Foot"
+        inputTwo.value === "SquareMeter" &&
+        output.value === "Square Foot"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 6;
+        outputNumber.value = Number(inputNumber.value) * 10.76391;
       } else if (
-        metricTwo.value === "SquareMeter" &&
-        metricThree.value === "Square Mile"
+        inputTwo.value === "SquareMeter" &&
+        output.value === "Square Mile"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 7;
-      } else if (
-        metricTwo.value === "SquareMeter" &&
-        metricThree.value === "Acre"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 8;
+        outputNumber.value = Number(inputNumber.value) / 2589988.11;
+      } else if (inputTwo.value === "SquareMeter" && output.value === "Acre") {
+        outputNumber.value = Number(inputNumber.value) / 4046.856422;
       }
 
       //Else If Statement for SquareKilometer Conversions
       else if (
-        metricTwo.value === "SquareKilometer" &&
-        metricThree.value === "Square Millimeter"
+        inputTwo.value === "SquareKilometer" &&
+        output.value === "Square Millimeter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1;
+        outputNumber.value = Number(inputNumber.value) * 1000000000000;
       } else if (
-        metricTwo.value === "SquareKilometer" &&
-        metricThree.value === "Square Centimeter"
+        inputTwo.value === "SquareKilometer" &&
+        output.value === "Square Centimeter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 2;
+        outputNumber.value = Number(inputNumber.value) * 10000000000;
       } else if (
-        metricTwo.value === "SquareKilometer" &&
-        metricThree.value === "Square Meter"
+        inputTwo.value === "SquareKilometer" &&
+        output.value === "Square Meter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 3;
+        outputNumber.value = Number(inputNumber.value) * 1000000;
       } else if (
-        metricTwo.value === "SquareKilometer" &&
-        metricThree.value === "Hectare"
+        inputTwo.value === "SquareKilometer" &&
+        output.value === "Hectare"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 4;
+        outputNumber.value = Number(inputNumber.value) * 100;
       } else if (
-        metricTwo.value === "SquareKilometer" &&
-        metricThree.value === "Square Inch"
+        inputTwo.value === "SquareKilometer" &&
+        output.value === "Square Inch"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 5;
+        outputNumber.value = Number(inputNumber.value) * 1550003100.0062;
       } else if (
-        metricTwo.value === "SquareKilometer" &&
-        metricThree.value === "Square Foot"
+        inputTwo.value === "SquareKilometer" &&
+        output.value === "Square Foot"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 6;
+        outputNumber.value = Number(inputNumber.value) * 10763910.41671;
       } else if (
-        metricTwo.value === "SquareKilometer" &&
-        metricThree.value === "Square Mile"
+        inputTwo.value === "SquareKilometer" &&
+        output.value === "Square Mile"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 7;
+        outputNumber.value = Number(inputNumber.value) / 2.589988;
       } else if (
-        metricTwo.value === "SquareKilometer" &&
-        metricThree.value === "Acre"
+        inputTwo.value === "SquareKilometer" &&
+        output.value === "Acre"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 8;
+        outputNumber.value = Number(inputNumber.value) * 247.105381;
       }
 
       //Else If Statement for Hectare Conversions
       else if (
-        metricTwo.value === "Hectare" &&
-        metricThree.value === "Square Millimeter"
+        inputTwo.value === "Hectare" &&
+        output.value === "Square Millimeter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1;
+        outputNumber.value = Number(inputNumber.value) * 10000000000;
       } else if (
-        metricTwo.value === "Hectare" &&
-        metricThree.value === "Square Centimeter"
+        inputTwo.value === "Hectare" &&
+        output.value === "Square Centimeter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 2;
+        outputNumber.value = Number(inputNumber.value) * 100000000;
       } else if (
-        metricTwo.value === "Hectare" &&
-        metricThree.value === "Square Meter"
+        inputTwo.value === "Hectare" &&
+        output.value === "Square Meter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 3;
+        outputNumber.value = Number(inputNumber.value) * 10000;
       } else if (
-        metricTwo.value === "Hectare" &&
-        metricThree.value === "Square Kilometer"
+        inputTwo.value === "Hectare" &&
+        output.value === "Square Kilometer"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 4;
+        outputNumber.value = Number(inputNumber.value) / 100;
       } else if (
-        metricTwo.value === "Hectare" &&
-        metricThree.value === "Square Inch"
+        inputTwo.value === "Hectare" &&
+        output.value === "Square Inch"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 5;
+        outputNumber.value = Number(inputNumber.value) * 15500031.000062;
       } else if (
-        metricTwo.value === "Hectare" &&
-        metricThree.value === "Square Foot"
+        inputTwo.value === "Hectare" &&
+        output.value === "Square Foot"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 6;
+        outputNumber.value = Number(inputNumber.value) * 107639.104167;
       } else if (
-        metricTwo.value === "Hectare" &&
-        metricThree.value === "Square Mile"
+        inputTwo.value === "Hectare" &&
+        output.value === "Square Mile"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 7;
+        outputNumber.value = Number(inputNumber.value) / 258.998811;
+      } else if (inputTwo.value === "Hectare" && output.value === "Acre") {
+        outputNumber.value = Number(inputNumber.value) * 2.471;
+      }
+
+      //Else If Statement for SquareInch Conversions
+      else if (
+        inputTwo.value === "SquareInch" &&
+        output.value === "Square Millimeter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 645.16;
       } else if (
-        metricTwo.value === "Hectare" &&
-        metricThree.value === "Acre"
+        inputTwo.value === "SquareInch" &&
+        output.value === "Square Centimeter"
       ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 8;
+        outputNumber.value = Number(inputNumber.value) * 6.4516;
+      } else if (
+        inputTwo.value === "SquareInch" &&
+        output.value === "Square Meter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) / 1550.0031;
+      } else if (
+        inputTwo.value === "SquareInch" &&
+        output.value === "Square Kilometer"
+      ) {
+        outputNumber.value = Number(inputNumber.value) / 1550003100.0062;
+      } else if (
+        inputTwo.value === "SquareInch" &&
+        output.value === "Hectare"
+      ) {
+        outputNumber.value = Number(inputNumber.value) / 15500031.000062;
+      } else if (
+        inputTwo.value === "SquareInch" &&
+        output.value === "Square Foot"
+      ) {
+        outputNumber.value = Number(inputNumber.value) / 144;
+      } else if (
+        inputTwo.value === "SquareInch" &&
+        output.value === "Square Mile"
+      ) {
+        outputNumber.value = Number(inputNumber.value) / 4014489599.4792;
+      } else if (inputTwo.value === "SquareInch" && output.value === "Acre") {
+        outputNumber.value = Number(inputNumber.value) / 6272640;
+      }
+
+      //Else If Statement for SquareFoot Conversions
+      else if (
+        inputTwo.value === "SquareFoot" &&
+        output.value === "Square Millimeter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 92903.04;
+      } else if (
+        inputTwo.value === "SquareFoot" &&
+        output.value === "Square Centimeter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 929.0304;
+      } else if (
+        inputTwo.value === "SquareFoot" &&
+        output.value === "Square Meter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) / 10.76391;
+      } else if (
+        inputTwo.value === "SquareFoot" &&
+        output.value === "Square Kilometer"
+      ) {
+        outputNumber.value = Number(inputNumber.value) / 10763910.41670972;
+      } else if (
+        inputTwo.value === "SquareFoot" &&
+        output.value === "Hectare"
+      ) {
+        outputNumber.value = Number(inputNumber.value) / 107639.104167;
+      } else if (
+        inputTwo.value === "SquareFoot" &&
+        output.value === "Square Inch"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 144;
+      } else if (
+        inputTwo.value === "SquareFoot" &&
+        output.value === "Square Mile"
+      ) {
+        outputNumber.value = Number(inputNumber.value) / 27878399.996383;
+      } else if (inputTwo.value === "SquareFoot" && output.value === "Acre") {
+        outputNumber.value = Number(inputNumber.value) / 43560;
+      }
+
+      //Else If Statement for SquareMile Conversions
+      else if (
+        inputTwo.value === "SquareMile" &&
+        output.value === "Square Millimeter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2589988110000;
+      } else if (
+        inputTwo.value === "SquareMile" &&
+        output.value === "Square Centimeter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 25899881100;
+      } else if (
+        inputTwo.value === "SquareMile" &&
+        output.value === "Square Meter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2589988.11;
+      } else if (
+        inputTwo.value === "SquareMile" &&
+        output.value === "Square Kilometer"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2.589988;
+      } else if (
+        inputTwo.value === "SquareMile" &&
+        output.value === "Hectare"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 258.998811;
+      } else if (
+        inputTwo.value === "SquareMile" &&
+        output.value === "Square Inch"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4014489599.4792;
+      } else if (
+        inputTwo.value === "SquareMile" &&
+        output.value === "Square Foot"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 27878399.996383;
+      } else if (inputTwo.value === "SquareMile" && output.value === "Acre") {
+        outputNumber.value = Number(inputNumber.value) * 640;
+      }
+
+      //Else If Statement for Acre Conversions
+      else if (
+        inputTwo.value === "Acre" &&
+        output.value === "Square Millimeter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4046856422.4;
+      } else if (
+        inputTwo.value === "Acre" &&
+        output.value === "Square Centimeter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 40468564.224;
+      } else if (inputTwo.value === "Acre" && output.value === "Square Meter") {
+        outputNumber.value = Number(inputNumber.value) * 4046.856422;
+      } else if (
+        inputTwo.value === "Acre" &&
+        output.value === "Square Kilometer"
+      ) {
+        outputNumber.value = Number(inputNumber.value) / 247.105381;
+      } else if (inputTwo.value === "Acre" && output.value === "Hectare") {
+        outputNumber.value = Number(inputNumber.value) * 2.47105;
+      } else if (inputTwo.value === "Acre" && output.value === "Square Inch") {
+        outputNumber.value = Number(inputNumber.value) * 6272640;
+      } else if (inputTwo.value === "Acre" && output.value === "Square Foot") {
+        outputNumber.value = Number(inputNumber.value) * 43560;
+      } else if (inputTwo.value === "Acre" && output.value === "Square Mile") {
+        outputNumber.value = Number(inputNumber.value) / 640;
       }
 
       // Else If Statements for Temperature Conversions
 
       //Else If Statement for Celsius Conversions
-      else if (
-        metricTwo.value === "Celsius" &&
-        metricThree.value === "Fahrenheit"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 1;
-      } else if (
-        metricTwo.value === "Celsius" &&
-        metricThree.value === "Kelvin"
-      ) {
-        metricOutputNumber.value = Number(metricInputNumber.value) / 2;
+      else if (inputTwo.value === "Celsius" && output.value === "Fahrenheit") {
+        outputNumber.value = Number(inputNumber.value * (9 / 5) + 32);
+      } else if (inputTwo.value === "Celsius" && output.value === "Kelvin") {
+        outputNumber.value = Number(inputNumber.value) + 273.15;
+      }
+
+      //Else If Statement for Fahrenheit Conversions
+      else if (inputTwo.value === "Fahrenheit" && output.value === "Celsius") {
+        outputNumber.value = (Number(inputNumber.value - 32) * 5) / 9;
+      } else if (inputTwo.value === "Fahrenheit" && output.value === "Kelvin") {
+        outputNumber.value = (Number(inputNumber.value - 32) * 5) / 9 + 273.15;
+      }
+
+      //Else If Statement for Kelvin Conversions
+      else if (inputTwo.value === "Kelvin" && output.value === "Fahrenheit") {
+        outputNumber.value = (Number(inputNumber.value - 273.15) * 9) / 5 + 32;
+      } else if (inputTwo.value === "Kelvin" && output.value === "Celsius") {
+        outputNumber.value = Number(inputNumber.value) - 273.15;
       }
     }
   }
 
-  if (state.view === "Metricsystem") {
-    cascadingMetricData();
+  if (state.view === "Conversion") {
+    cascadingConversionData();
   }
-  // function cascadingImperialData() {
-  //   const imperialOne = document.getElementById("imperial1");
-  //   const imperialTwo = document.getElementById("imperial2");
-  //   const imperialThree = document.getElementById("imperial3");
-
-  //   for (const imperialMeasurementType in imperialData) {
-  //     imperialOne.options[imperialOne.options.length] = new Option(
-  //       imperialMeasurementType
-  //     );
-  //   }
-
-  //   imperialOne.onchange = function() {
-  //     imperialTwo.length = 1;
-  //     imperialThree.length = 1;
-  //     for (const imperialUnitType in imperialData[this.value]) {
-  //       imperialTwo.options[imperialTwo.options.length] = new Option(
-  //         imperialUnitType
-  //       );
-  //     }
-  //   };
-  //   imperialTwo.onchange = function() {
-  //     imperialThree.length = 1;
-
-  //     const imperialOutputType = imperialData[imperialOne.value][this.value];
-  //     for (let i = 0; i < imperialOutputType.length; i++) {
-  //       imperialThree.options[imperialThree.options.length] = new Option(
-  //         imperialOutputType[i]
-  //       );
-  //     }
-  //   };
-  // }
-  // These invocations cause the nav bar links to not work.
-  // cascadingMetricData();
 }
 
 router.hooks({
@@ -812,32 +923,32 @@ router.hooks({
     // Add a switch case statement to handle multiple routes
     switch (view) {
       // New Case for the Home View
-      case "Home":
-        axios
-          // Get request to retrieve the current weather data using the API key and providing a city name
-          .get(
-            `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=st%20louis`
-          )
-          .then(response => {
-            // Convert Kelvin to Fahrenheit since OpenWeatherMap does provide otherwise
-            const kelvinToFahrenheit = kelvinTemp =>
-              Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
+      // case "Home":
+      //   axios
+      //     // Get request to retrieve the current weather data using the API key and providing a city name
+      //     .get(
+      //       `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=st%20louis`
+      //     )
+      //     .then(response => {
+      //       // Convert Kelvin to Fahrenheit since OpenWeatherMap does provide otherwise
+      //       const kelvinToFahrenheit = kelvinTemp =>
+      //         Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
 
-            // Create an object to be stored in the Home state from the response
-            store.Home.weather = {
-              city: response.data.name,
-              temp: kelvinToFahrenheit(response.data.main.temp),
-              feelsLike: kelvinToFahrenheit(response.data.main.feels_like),
-              description: response.data.weather[0].main
-            };
-            done();
-          })
-          .catch(err => {
-            console.log(err);
-            done();
-          });
-        break;
-      case "Metricsystem":
+      //       // Create an object to be stored in the Home state from the response
+      //       store.Home.weather = {
+      //         city: response.data.name,
+      //         temp: kelvinToFahrenheit(response.data.main.temp),
+      //         feelsLike: kelvinToFahrenheit(response.data.main.feels_like),
+      //         description: response.data.weather[0].main
+      //       };
+      //       done();
+      //     })
+      //     .catch(err => {
+      //       console.log(err);
+      //       done();
+      //     });
+      //   break;
+      case "Character":
         axios
           .get(
             "https://www.swapi.tech/api/people/" +
@@ -845,7 +956,7 @@ router.hooks({
           )
           .then(response => {
             console.log(response.data);
-            store.Metricsystem.swapi = {
+            store.Character.swapi = {
               name: response.data.result.properties.name
             };
             done();
