@@ -2,7 +2,7 @@ import html from "html-literal";
 import simpleConversions from "../../SimpleConversions/SCButterscotch.png";
 import imperialSystem from "../../ImperialSystem/ISButterscotch.png";
 import metricSystem from "../../MetricSystem/MSButterscotch.png";
-export default state => html`
+export default () => html`
   <main>
     <div class="page-logo">
       <img
@@ -27,9 +27,4 @@ export default state => html`
       <h1>Which System Do You Prefer?</h1>
     </div>
   </main>
-  <!-- <h3>
-    The weather in ${state.weather.city} is ${state.weather.description}.
-    Temperature is ${state.weather.temp}F, and it feels like
-    ${state.weather.feelsLike}F.
-  </h3> -->
 `;
