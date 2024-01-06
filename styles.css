@@ -139,14 +139,6 @@
   margin-top: 15px;
 }
 
-.subscribe-checkbox {
-  display: flex;
-  justify-content: center;
-  color:#de8f3f;
-  margin-top: 10px;
-  font-size: 20px;
-}
-
 .submit-button {
   display:flex;
   justify-content: center;
