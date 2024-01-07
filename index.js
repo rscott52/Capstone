@@ -911,6 +911,37 @@ function afterRender(state) {
   if (state.view === "Conversion") {
     cascadingConversionData();
   }
+
+  if (state.view === "Character") {
+    // Add an event handler for the submit button on the form
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
+
+      // Get the form element
+      const inputList = event.target.elements;
+      console.log("Input Element List", inputList);
+
+      // Create a request body object to send to the API
+      const requestData = {
+        character: inputList.characterName.value
+      };
+      // Log the request body to the console
+      console.log("request Body", requestData);
+
+      axios
+        // Make a POST request to the API to create a new character
+        .post(`${process.env.Character_API_URL}/characters`, requestData)
+        .then(response => {
+          //  Then push the new character onto the Character state characters attribute, so it can be displayed in the character list
+          store.Character.characters.push(response.data);
+          router.navigate("/Character");
+        })
+        // If there is an error log it to the console
+        .catch(error => {
+          console.log("It puked", error);
+        });
+    });
+  }
 }
 
 router.hooks({

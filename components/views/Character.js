@@ -19,5 +19,40 @@ export default state => html`
         >
       </p>
     </div>
+    <form id="favorite-character" method="POST" action="">
+      <h1>Who Is Your Favorite Character?</h1>
+      <div>
+        <label for="characterName">Character Name:</label>
+        <input
+          type="text"
+          name="characterName"
+          id="characterName"
+          placeholder="Enter Character Name"
+          required
+        />
+      </div>
+      <input type="submit" name="submit" value="Submit Character" />
+    </form>
+    <div id="character-table">
+      <table id="characters">
+        <tr>
+          <th>Characters</th>
+        </tr>
+        ${state.characters
+          .map(character => {
+            return `<tr><td>${character.character}</td></tr>`;
+          })
+          .join("")}
+      </table>
+
+      <p>
+        You can find information about the mentioned characters above by going
+        to the
+        <a href="https://starwars.fandom.com/wiki/Main_Page"
+          >Wookieepedia Fandom Page</a
+        >
+        and searching for them.
+      </p>
+    </div>
   </main>
 `;

@@ -1,4 +1,5 @@
 export default {
   view: "Character",
-  swapi: {}
+  swapi: {},
+  characters: []
 };

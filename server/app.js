@@ -1,10 +1,26 @@
 import express from "express";
 import dotenv from "dotenv";
+import mongoose from "mongoose";
+import characters from "./routers/characters.js";
 
 // Load environment variables from .env file
 dotenv.config();
 
 const app = express();
+
+mongoose.connect(process.env.MONGODB, {
+  // Configuration options to remove deprecation warnings, just include them to remove clutter
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
+const db = mongoose.connection;
+
+db.on("error", console.error.bind(console, "Connection Error:"));
+db.once(
+  "open",
+  console.log.bind(console, "Successfully opened connection to Mongo!")
+);
 
 const PORT = process.env.PORT || 4040;
 
@@ -40,5 +56,7 @@ app.use(logging);
 app.get("/status", (request, response) => {
   response.status(200).json({ message: "Service healthy" });
 });
+
+app.use("/characters", characters);
 
 app.listen(PORT, () => console.log("Listening on port 4040"));
