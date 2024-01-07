@@ -245,10 +245,12 @@
 
 .character {
   color: #de8f3f;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  width: 50%;
-  height: 50%;
+  justify-content: center;
 }
+
 .SW-iframe {
   display: flex;
   flex-direction: column;
@@ -265,6 +267,28 @@
   color: #FBF7F4;
 }
 
+.favorite-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #de8f3f;
+}
+.favorite-form a {
+  color: #96E2ED;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+.favorite-form a:hover {
+  color: #FBF7F4;
+}
+
+#character-table {
+  color:#de8f3f;
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+}
 
 
 .toggle-button {
