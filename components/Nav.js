@@ -2,14 +2,14 @@ import html from "html-literal";
 
 export default links => html`
   <nav class="header nav-bar">
+    <div class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
     <div><h1 class="brand-title">SimpleConversions</h1></div>
-    <a href="#" class="toggle-button">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </a>
     <div class="nav-bar navbar-links">
-      <ul>
+      <ul class="nav-links">
         ${links
           .map(
             link =>
