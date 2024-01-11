@@ -945,7 +945,7 @@ function afterRender(state) {
 }
 
 router.hooks({
-  before: (done, params) => {
+  before: async (done, params) => {
     // We need to know what view we are on to know what data to fetch
     const view =
       params && params.data && params.data.view
@@ -968,6 +968,21 @@ router.hooks({
           })
           .catch(error => {
             console.log(error);
+            done();
+          });
+        break;
+      case "Character":
+        // New Axios get request utilizing already made environment variable
+        axios
+          .get(`${process.env.Character_API_URL}/characters`)
+          .then(response => {
+            // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
+            console.log("response", response.data);
+            store.Character.characters = response.data;
+            done();
+          })
+          .catch(error => {
+            console.log("It puked", error);
             done();
           });
         break;
