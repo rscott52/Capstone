@@ -13,9 +13,15 @@ export default state => html`
         height="750px"
       ></iframe>
       <p>
-        Information is provided by the
-        <a href="https://starwars.fandom.com/wiki/Main_Page"
+      This article, from the <a href="https://starwars.fandom.com/wiki/Main_Page"
           >Wookieepedia Fandom Page</a
+        >  is licensed under the <a href="https://creativecommons.org/licenses/by-sa/3.0/">
+      Creative Commons Attribution-ShareAlike 3.0 Unported license</a>. It uses material from the
+      <a href="https://starwars.fandom.com/wiki/
+        ${state.swapi.name}">Wookieepedia article "${state.swapi.name}".</a>
+        This Information is provided by the
+        <a href="https://starwars.fandom.com/wiki/Wookieepedia:Copyrights#Users'_rights_and_obligations"
+          >Wookieepedia Fandom Page.</a
         >
       </p>
     </div>
