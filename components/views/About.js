@@ -19,7 +19,7 @@ export default () => html`
         them as simple and quick as possible. Want to convert a Metric
         measurement to US/Imperial? How about an US/Imperial measurement to
         Metric? Take a look at our
-        <a class="about-this-site-links" href=${"Metricsystem"}
+        <a class="about-this-site-links" href=${"Conversion"}
           >Conversion Page!</a
         >
         Interested in learning how to read or take a measurement? Check out our
