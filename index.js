@@ -954,7 +954,7 @@ router.hooks({
     // Add a switch case statement to handle multiple routes
     switch (view) {
       case "Character":
-        axios
+        await axios
           .get(
             "https://www.swapi.tech/api/people/" +
               Math.floor(Math.random() * 83)
@@ -964,27 +964,20 @@ router.hooks({
             store.Character.swapi = {
               name: response.data.result.properties.name
             };
-            done();
           })
           .catch(error => {
             console.log(error);
-            done();
           });
-        break;
-      case "Character":
-        // New Axios get request utilizing already made environment variable
-        axios
+        await axios
           .get(`${process.env.Character_API_URL}/characters`)
           .then(response => {
-            // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
             console.log("response", response.data);
             store.Character.characters = response.data;
-            done();
           })
           .catch(error => {
             console.log("It puked", error);
-            done();
           });
+        done();
         break;
       default:
         done();
