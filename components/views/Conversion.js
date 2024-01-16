@@ -14,7 +14,7 @@ export default () => html`
         <select name="unit Type" id="input2">
           <option value="input2">Select Input</option>
         </select>
-        <br><input id= "input-number" type="number"></input>
+        <br /><input id="input-number" type="number" />
       </div>
       <div class="arrow">
         <img src="${arrow}" alt="arrow" />
@@ -24,8 +24,8 @@ export default () => html`
         <select name="Value Type" id="output">
           <option value="output">Select Output</option>
         </select>
-        <br><input id= "output-number" type="number"></input>
-        <br><p> * PLEASE NOTE THESE ARE APPROXIMATE RESULTS</p>
+        <br /><input id="output-number" type="number" /> <br />
+        <p>* PLEASE NOTE THESE ARE APPROXIMATE RESULTS</p>
       </div>
     </div>
     <div class="metric-system">

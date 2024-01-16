@@ -45,7 +45,7 @@ export default state => html`
           <a href="https://starwars.fandom.com/wiki/Main_Page"
             >Wookieepedia Fandom Page</a
           >
-          and searching for them.
+          and searching for them, or by clicking on the hyperlink below.
         </p>
       </form>
     </div>
@@ -57,7 +57,7 @@ export default state => html`
           </tr>
           ${state.characters
             .map(character => {
-              return `<tr><td>${character.character}</td></tr>`;
+              return `<tr><td><a href="https://starwars.fandom.com/wiki/${character.character}">${character.character}</a></td></tr>`;
             })
             .join("")}
         </table>

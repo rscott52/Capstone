@@ -40,8 +40,8 @@ export default () => html`
         conversions. We wanted an easier way to quickly plug in a number and get
         exactly what we needed. Thus, Simple Conversions was born! Whether you
         are cooking, traveling, trying to find a temperature difference, or
-        measure the size of a area, this site will be able to help you find a
-        fast and simple solution to your conversion!
+        measure the size of a area, this site will help you find a fast and
+        simple solution to your conversion!
       </p>
 
       <h1>Why Metric and US/Imperial?</h1>
