@@ -835,79 +835,79 @@ function afterRender(state) {
         inputTwo.value === "US Teaspoon" &&
         output.value === "US Tablespoon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 16;
+        outputNumber.value = Number(inputNumber.value) / 3;
       } else if (
         inputTwo.value === "US Teaspoon" &&
         output.value === "US Fluid Ounce"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) / 6;
       } else if (
         inputTwo.value === "US Teaspoon" &&
         output.value === "US Gill"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) / 24;
       } else if (
         inputTwo.value === "US Teaspoon" &&
         output.value === "US Pint"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 16;
+        outputNumber.value = Number(inputNumber.value) / 96;
       } else if (
         inputTwo.value === "US Teaspoon" &&
         output.value === "US Quart"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 32;
+        outputNumber.value = Number(inputNumber.value) / 192;
       } else if (
         inputTwo.value === "US Teaspoon" &&
         output.value === "US Gallon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 907.18474;
+        outputNumber.value = Number(inputNumber.value) / 768;
       } else if (
         inputTwo.value === "US Teaspoon" &&
         output.value === "Imperial Teaspoon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) / 1.201;
       } else if (
         inputTwo.value === "US Teaspoon" &&
         output.value === "Imperial Tablespoon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 16;
+        outputNumber.value = Number(inputNumber.value) / 3.603;
       } else if (
         inputTwo.value === "US Teaspoon" &&
         output.value === "Imperial Fluid Ounce"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) / 5.765;
       } else if (
         inputTwo.value === "US Teaspoon" &&
         output.value === "Imperial Gill"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) / 28.823;
       } else if (
         inputTwo.value === "US Teaspoon" &&
         output.value === "Imperial Pint"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 16;
+        outputNumber.value = Number(inputNumber.value) / 115.3;
       } else if (
         inputTwo.value === "US Teaspoon" &&
         output.value === "Imperial Quart"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 32;
+        outputNumber.value = Number(inputNumber.value) / 230.6;
       } else if (
         inputTwo.value === "US Teaspoon" &&
         output.value === "Imperial Gallon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 907.18474;
+        outputNumber.value = Number(inputNumber.value) / 992.3;
       } else if (
         inputTwo.value === "US Teaspoon" &&
         output.value === "Milliliter"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 32000;
+        outputNumber.value = Number(inputNumber.value) * 4.928922;
       } else if (inputTwo.value === "US Teaspoon" && output.value === "Liter") {
-        outputNumber.value = Number(inputNumber.value) * 2000;
+        outputNumber.value = Number(inputNumber.value) / 202.884136;
       } else if (
         inputTwo.value === "US Teaspoon" &&
         output.value === "Kiloliter"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 2000;
+        outputNumber.value = Number(inputNumber.value) / 202900;
       }
 
       // Else If Statements for US Tablespoon Conversions
@@ -915,82 +915,82 @@ function afterRender(state) {
         inputTwo.value === "US Tablespoon" &&
         output.value === "US Teaspoon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 16;
+        outputNumber.value = Number(inputNumber.value) * 3;
       } else if (
         inputTwo.value === "US Tablespoon" &&
         output.value === "US Fluid Ounce"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) / 2;
       } else if (
         inputTwo.value === "US Tablespoon" &&
         output.value === "US Gill"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) / 8;
       } else if (
         inputTwo.value === "US Tablespoon" &&
         output.value === "US Pint"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 16;
+        outputNumber.value = Number(inputNumber.value) / 32;
       } else if (
         inputTwo.value === "US Tablespoon" &&
         output.value === "US Quart"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 32;
+        outputNumber.value = Number(inputNumber.value) / 64;
       } else if (
         inputTwo.value === "US Tablespoon" &&
         output.value === "US Gallon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 907.18474;
+        outputNumber.value = Number(inputNumber.value) / 256;
       } else if (
         inputTwo.value === "US Tablespoon" &&
         output.value === "Imperial Teaspoon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) * 2.498;
       } else if (
         inputTwo.value === "US Tablespoon" &&
         output.value === "Imperial Tablespoon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 16;
+        outputNumber.value = Number(inputNumber.value) / 1.201;
       } else if (
         inputTwo.value === "US Tablespoon" &&
         output.value === "Imperial Fluid Ounce"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) / 1.922;
       } else if (
         inputTwo.value === "US Tablespoon" &&
         output.value === "Imperial Gill"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) / 9.608;
       } else if (
         inputTwo.value === "US Tablespoon" &&
         output.value === "Imperial Pint"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 16;
+        outputNumber.value = Number(inputNumber.value) / 38.43;
       } else if (
         inputTwo.value === "US Tablespoon" &&
         output.value === "Imperial Quart"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 32;
+        outputNumber.value = Number(inputNumber.value) / 76.861;
       } else if (
         inputTwo.value === "US Tablespoon" &&
         output.value === "Imperial Gallon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 907.18474;
+        outputNumber.value = Number(inputNumber.value) / 307.4;
       } else if (
         inputTwo.value === "US Tablespoon" &&
         output.value === "Milliliter"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 32000;
+        outputNumber.value = Number(inputNumber.value) * 14.787;
       } else if (
         inputTwo.value === "US Tablespoon" &&
         output.value === "Liter"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 2000;
+        outputNumber.value = Number(inputNumber.value) / 67.628;
       } else if (
         inputTwo.value === "US Tablespoon" &&
         output.value === "Kiloliter"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 2000;
+        outputNumber.value = Number(inputNumber.value) / 67630;
       }
 
       // Else If Statements for US Fluid Ounce Conversions
@@ -998,147 +998,147 @@ function afterRender(state) {
         inputTwo.value === "US Fluid Ounce" &&
         output.value === "US Teaspoon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) * 6;
       } else if (
         inputTwo.value === "US Fluid Ounce" &&
         output.value === "US Tablespoon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 16;
+        outputNumber.value = Number(inputNumber.value) * 2;
       } else if (
         inputTwo.value === "US Fluid Ounce" &&
         output.value === "US Gill"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) / 4;
       } else if (
         inputTwo.value === "US Fluid Ounce" &&
         output.value === "US Pint"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 16;
+        outputNumber.value = Number(inputNumber.value) / 16;
       } else if (
         inputTwo.value === "US Fluid Ounce" &&
         output.value === "US Quart"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 32;
+        outputNumber.value = Number(inputNumber.value) / 32;
       } else if (
         inputTwo.value === "US Fluid Ounce" &&
         output.value === "US Gallon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 907.18474;
+        outputNumber.value = Number(inputNumber.value) / 128;
       } else if (
         inputTwo.value === "US Fluid Ounce" &&
         output.value === "Imperial Teaspoon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) * 4.996;
       } else if (
         inputTwo.value === "US Fluid Ounce" &&
         output.value === "Imperial Tablespoon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 16;
+        outputNumber.value = Number(inputNumber.value) * 1.66535;
       } else if (
         inputTwo.value === "US Fluid Ounce" &&
         output.value === "Imperial Fluid Ounce"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) * 1.04084;
       } else if (
         inputTwo.value === "US Fluid Ounce" &&
         output.value === "Imperial Gill"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) / 4.804;
       } else if (
         inputTwo.value === "US Fluid Ounce" &&
         output.value === "Imperial Pint"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 16;
+        outputNumber.value = Number(inputNumber.value) / 19.215;
       } else if (
         inputTwo.value === "US Fluid Ounce" &&
         output.value === "Imperial Quart"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 32;
+        outputNumber.value = Number(inputNumber.value) / 38.43;
       } else if (
         inputTwo.value === "US Fluid Ounce" &&
         output.value === "Imperial Gallon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 907.18474;
+        outputNumber.value = Number(inputNumber.value) / 153.7;
       } else if (
         inputTwo.value === "US Fluid Ounce" &&
         output.value === "Milliliter"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 32000;
+        outputNumber.value = Number(inputNumber.value) * 29.574;
       } else if (
-        inputTwo.value === "US FluidOunce" &&
+        inputTwo.value === "US Fluid Ounce" &&
         output.value === "Liter"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 2000;
+        outputNumber.value = Number(inputNumber.value) / 33.814;
       } else if (
         inputTwo.value === "US Fluid Ounce" &&
         output.value === "Kiloliter"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 2000;
+        outputNumber.value = Number(inputNumber.value) / 33810;
       }
 
       // Else If Statements for US Gill Conversions
       else if (inputTwo.value === "US Gill" && output.value === "US Teaspoon") {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) * 24;
       } else if (
         inputTwo.value === "US Gill" &&
         output.value === "US Tablespoon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 16;
+        outputNumber.value = Number(inputNumber.value) * 8;
       } else if (
         inputTwo.value === "US Gill" &&
         output.value === "US Fluid Ounce"
       ) {
         outputNumber.value = Number(inputNumber.value) * 4;
       } else if (inputTwo.value === "US Gill" && output.value === "US Pint") {
-        outputNumber.value = Number(inputNumber.value) * 16;
+        outputNumber.value = Number(inputNumber.value) / 4;
       } else if (inputTwo.value === "US Gill" && output.value === "US Quart") {
-        outputNumber.value = Number(inputNumber.value) * 32;
+        outputNumber.value = Number(inputNumber.value) / 8;
       } else if (inputTwo.value === "US Gill" && output.value === "US Gallon") {
-        outputNumber.value = Number(inputNumber.value) * 907.18474;
+        outputNumber.value = Number(inputNumber.value) / 32;
       } else if (
         inputTwo.value === "US Gill" &&
         output.value === "Imperial Teaspoon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) * 19.9842;
       } else if (
         inputTwo.value === "US Gill" &&
         output.value === "Imperial Tablespoon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 16;
+        outputNumber.value = Number(inputNumber.value) * 6.66139;
       } else if (
         inputTwo.value === "US Gill" &&
         output.value === "Imperial Fluid Ounce"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value = Number(inputNumber.value) * 4.16337;
       } else if (
         inputTwo.value === "US Gill" &&
         output.value === "Imperial Gill"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 4;
+        outputNumber.value;
       } else if (
         inputTwo.value === "US Gill" &&
         output.value === "Imperial Pint"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 16;
+        outputNumber.value = Number(inputNumber.value) / 4.804;
       } else if (
         inputTwo.value === "US Gill" &&
         output.value === "Imperial Quart"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 32;
+        outputNumber.value = Number(inputNumber.value) / 9.608;
       } else if (
         inputTwo.value === "US Gill" &&
         output.value === "Imperial Gallon"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 907.18474;
+        outputNumber.value = Number(inputNumber.value) / 38.43;
       } else if (
         inputTwo.value === "US Gill" &&
         output.value === "Milliliter"
       ) {
-        outputNumber.value = Number(inputNumber.value) * 32000;
+        outputNumber.value = Number(inputNumber.value) * 113.3;
       } else if (inputTwo.value === "US Gill" && output.value === "Liter") {
-        outputNumber.value = Number(inputNumber.value) * 2000;
+        outputNumber.value = Number(inputNumber.value) / 8.454;
       } else if (inputTwo.value === "US Gill" && output.value === "Kiloliter") {
-        outputNumber.value = Number(inputNumber.value) * 2000;
+        outputNumber.value = Number(inputNumber.value) / 8454;
       }
 
       // Else If Statements for US Pint Conversions
@@ -1351,6 +1351,791 @@ function afterRender(state) {
         inputTwo.value === "US Gallon" &&
         output.value === "Kiloliter"
       ) {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      }
+
+      // Else If Statements for Imperial Teaspoon Conversions
+      else if (
+        inputTwo.value === "Imperial Teaspoon" &&
+        output.value === "US Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Teaspoon" &&
+        output.value === "US Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Teaspoon" &&
+        output.value === "US Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Teaspoon" &&
+        output.value === "US Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Teaspoon" &&
+        output.value === "US Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Imperial Teaspoon" &&
+        output.value === "US Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Imperial Teaspoon" &&
+        output.value === "US Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Teaspoon" &&
+        output.value === "Imperial Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Teaspoon" &&
+        output.value === "Imperial Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Teaspoon" &&
+        output.value === "Imperial Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Teaspoon" &&
+        output.value === "Imperial Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Teaspoon" &&
+        output.value === "Imperial Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Imperial Teaspoon" &&
+        output.value === "Imperial Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Imperial Teaspoon" &&
+        output.value === "Milliliter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32000;
+      } else if (
+        inputTwo.value === "Imperial Teaspoon" &&
+        output.value === "Liter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      } else if (
+        inputTwo.value === "Imperial Teaspoon" &&
+        output.value === "Kiloliter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      }
+
+      // Else If Statements for Imperial Tablespoon Conversions
+      else if (
+        inputTwo.value === "Imperial Tablespoon" &&
+        output.value === "US Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Tablespoon" &&
+        output.value === "US Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Tablespoon" &&
+        output.value === "US Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Tablespoon" &&
+        output.value === "US Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Tablespoon" &&
+        output.value === "US Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Imperial Tablespoon" &&
+        output.value === "US Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Imperial Tablespoon" &&
+        output.value === "US Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Tablespoon" &&
+        output.value === "Imperial Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Tablespoon" &&
+        output.value === "Imperial Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Tablespoon" &&
+        output.value === "Imperial Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Tablespoon" &&
+        output.value === "Imperial Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Tablespoon" &&
+        output.value === "Imperial Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Imperial Tablespoon" &&
+        output.value === "Imperial Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Imperial Tablespoon" &&
+        output.value === "Milliliter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32000;
+      } else if (
+        inputTwo.value === "Imperial Tablespoon" &&
+        output.value === "Liter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      } else if (
+        inputTwo.value === "Imperial Tablespoon" &&
+        output.value === "Kiloliter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      }
+
+      // Else If Statements for Imperial Fluid Ounce Conversions
+      else if (
+        inputTwo.value === "Imperial Fluid Ounce" &&
+        output.value === "US Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Fluid Ounce" &&
+        output.value === "US Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Fluid Ounce" &&
+        output.value === "US Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Fluid Ounce" &&
+        output.value === "US Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Fluid Ounce" &&
+        output.value === "US Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Imperial Fluid Ounce" &&
+        output.value === "US Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Imperial Fluid Ounce" &&
+        output.value === "US Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Fluid Ounce" &&
+        output.value === "Imperial Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Fluid Ounce" &&
+        output.value === "Imperial Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Fluid Ounce" &&
+        output.value === "Imperial Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Fluid Ounce" &&
+        output.value === "Imperial Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Fluid Ounce" &&
+        output.value === "Imperial Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Imperial Fluid Ounce" &&
+        output.value === "Imperial Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Imperial Fluid Ounce" &&
+        output.value === "Milliliter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32000;
+      } else if (
+        inputTwo.value === "Imperial Fluid Ounce" &&
+        output.value === "Liter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      } else if (
+        inputTwo.value === "Imperial Fluid Ounce" &&
+        output.value === "Kiloliter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      }
+
+      // Else If Statements for Imperial Gill Conversions
+      else if (
+        inputTwo.value === "Imperial Gill" &&
+        output.value === "US Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Gill" &&
+        output.value === "US Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Gill" &&
+        output.value === "US Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Gill" &&
+        output.value === "US Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Gill" &&
+        output.value === "US Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Imperial Gill" &&
+        output.value === "US Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Imperial Gill" &&
+        output.value === "US Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Gill" &&
+        output.value === "Imperial Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Gill" &&
+        output.value === "Imperial Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Gill" &&
+        output.value === "Imperial Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Gill" &&
+        output.value === "Imperial Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Gill" &&
+        output.value === "Imperial Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Imperial Gill" &&
+        output.value === "Imperial Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Imperial Gill" &&
+        output.value === "Milliliter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32000;
+      } else if (
+        inputTwo.value === "Imperial Gill" &&
+        output.value === "Liter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      } else if (
+        inputTwo.value === "Imperial Gill" &&
+        output.value === "Kiloliter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      }
+
+      // Else If Statements for Imperial Pint Conversions
+      else if (
+        inputTwo.value === "Imperial Pint" &&
+        output.value === "US Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Pint" &&
+        output.value === "US Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Pint" &&
+        output.value === "US Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Pint" &&
+        output.value === "US Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Pint" &&
+        output.value === "US Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Imperial Pint" &&
+        output.value === "US Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Imperial Pint" &&
+        output.value === "US Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Pint" &&
+        output.value === "Imperial Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Pint" &&
+        output.value === "Imperial Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Pint" &&
+        output.value === "Imperial Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Pint" &&
+        output.value === "Imperial Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Pint" &&
+        output.value === "Imperial Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Imperial Pint" &&
+        output.value === "Imperial Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Imperial Pint" &&
+        output.value === "Milliliter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32000;
+      } else if (
+        inputTwo.value === "Imperial Pint" &&
+        output.value === "Liter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      } else if (
+        inputTwo.value === "Imperial Pint" &&
+        output.value === "Kiloliter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      }
+
+      // Else If Statements for Imperial Quart Conversions
+      else if (
+        inputTwo.value === "Imperial Quart" &&
+        output.value === "US Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Quart" &&
+        output.value === "US Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Quart" &&
+        output.value === "US Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Quart" &&
+        output.value === "US Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Quart" &&
+        output.value === "US Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Imperial Quart" &&
+        output.value === "US Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Imperial Quart" &&
+        output.value === "US Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Quart" &&
+        output.value === "Imperial Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Quart" &&
+        output.value === "Imperial Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Quart" &&
+        output.value === "Imperial Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Quart" &&
+        output.value === "Imperial Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Quart" &&
+        output.value === "Imperial Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Imperial Quart" &&
+        output.value === "Imperial Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Imperial Quart" &&
+        output.value === "Milliliter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32000;
+      } else if (
+        inputTwo.value === "Imperial Quart" &&
+        output.value === "Liter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      } else if (
+        inputTwo.value === "Imperial Quart" &&
+        output.value === "Kiloliter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      }
+
+      // Else If Statements for Imperial Gallon Conversions
+      else if (
+        inputTwo.value === "Imperial Gallon" &&
+        output.value === "US Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Gallon" &&
+        output.value === "US Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Gallon" &&
+        output.value === "US Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Gallon" &&
+        output.value === "US Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Gallon" &&
+        output.value === "US Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Imperial Gallon" &&
+        output.value === "US Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Imperial Gallon" &&
+        output.value === "US Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Gallon" &&
+        output.value === "Imperial Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Gallon" &&
+        output.value === "Imperial Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Gallon" &&
+        output.value === "Imperial Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Imperial Gallon" &&
+        output.value === "Imperial Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Imperial Gallon" &&
+        output.value === "Imperial Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Imperial Gallon" &&
+        output.value === "Imperial Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Imperial Gallon" &&
+        output.value === "Milliliter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32000;
+      } else if (
+        inputTwo.value === "Imperial Gallon" &&
+        output.value === "Liter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      } else if (
+        inputTwo.value === "Imperial Gallon" &&
+        output.value === "Kiloliter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      }
+
+      // Else If Statements for Milliliter Conversions
+      else if (
+        inputTwo.value === "Milliliter" &&
+        output.value === "US Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Milliliter" &&
+        output.value === "US Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Milliliter" &&
+        output.value === "US Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Milliliter" &&
+        output.value === "US Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Milliliter" &&
+        output.value === "US Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Milliliter" &&
+        output.value === "US Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Milliliter" &&
+        output.value === "US Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Milliliter" &&
+        output.value === "Imperial Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Milliliter" &&
+        output.value === "Imperial Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Milliliter" &&
+        output.value === "Imperial Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Milliliter" &&
+        output.value === "Imperial Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Milliliter" &&
+        output.value === "Imperial Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Milliliter" &&
+        output.value === "Imperial Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Milliliter" &&
+        output.value === "Imperial Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32000;
+      } else if (inputTwo.value === "Milliliter" && output.value === "Liter") {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      } else if (
+        inputTwo.value === "Milliliter" &&
+        output.value === "Kiloliter"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      }
+
+      // Else If Statements for Liter Conversions
+      else if (inputTwo.value === "Liter" && output.value === "US Teaspoon") {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Liter" &&
+        output.value === "US Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Liter" &&
+        output.value === "US Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (inputTwo.value === "Liter" && output.value === "US Gill") {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (inputTwo.value === "Liter" && output.value === "US Pint") {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (inputTwo.value === "Liter" && output.value === "US Quart") {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (inputTwo.value === "Liter" && output.value === "US Gallon") {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Liter" &&
+        output.value === "Imperial Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Liter" &&
+        output.value === "Imperial Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Liter" &&
+        output.value === "Imperial Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Liter" &&
+        output.value === "Imperial Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Liter" &&
+        output.value === "Imperial Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Liter" &&
+        output.value === "Imperial Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Liter" &&
+        output.value === "Imperial Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32000;
+      } else if (inputTwo.value === "Liter" && output.value === "Milliliter") {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      } else if (inputTwo.value === "Liter" && output.value === "Kiloliter") {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      }
+
+      // Else If Statements for Kiloliter Conversions
+      else if (inputTwo.value === "Kiloliter" && output.value === "US Teaspoon") {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Kiloliter" &&
+        output.value === "US Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Kiloliter" &&
+        output.value === "US Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (inputTwo.value === "Kiloliter" && output.value === "US Gill") {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (inputTwo.value === "Kiloliter" && output.value === "US Pint") {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (inputTwo.value === "Kiloliter" && output.value === "US Quart") {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (inputTwo.value === "Kiloliter" && output.value === "US Gallon") {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Kiloliter" &&
+        output.value === "Imperial Teaspoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Kiloliter" &&
+        output.value === "Imperial Tablespoon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Kiloliter" &&
+        output.value === "Imperial Fluid Ounce"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 4;
+      } else if (
+        inputTwo.value === "Kiloliter" &&
+        output.value === "Imperial Gill"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 16;
+      } else if (
+        inputTwo.value === "Kiloliter" &&
+        output.value === "Imperial Pint"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32;
+      } else if (
+        inputTwo.value === "Kiloliter" &&
+        output.value === "Imperial Quart"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 907.18474;
+      } else if (
+        inputTwo.value === "Kiloliter" &&
+        output.value === "Imperial Gallon"
+      ) {
+        outputNumber.value = Number(inputNumber.value) * 32000;
+      } else if (inputTwo.value === "Kiloliter" && output.value === "Milliliter") {
+        outputNumber.value = Number(inputNumber.value) * 2000;
+      } else if (inputTwo.value === "Kiloliter" && output.value === "Liter") {
         outputNumber.value = Number(inputNumber.value) * 2000;
       }
       // Else If Statements for Area Conversions

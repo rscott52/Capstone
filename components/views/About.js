@@ -35,13 +35,17 @@ export default () => html`
 
       <h1>Why Conversions?</h1>
       <p>
-        One Evening, as my wife and I were in the process of making dinner, we
-        both began to complain about having to figure out measurement
-        conversions. We wanted an easier way to quickly plug in a number and get
-        exactly what we needed. Thus, Simple Conversions was born! Whether you
-        are cooking, traveling, trying to find a temperature difference, or
-        measure the size of a area, this site will help you find a fast and
-        simple solution to your conversion!
+        After deciding to embark on my journey into coding, more specifically
+        website development, I began attending the Savvy Coders Full Stack
+        Development Boot Camp. We were given the challenge of designing our own
+        website. After a few weeks of trying to decide what I wanted to do for
+        my Capstone Project I was stumped. Then, one evening, as my wife and I
+        were in the process of making dinner, we both began to complain about
+        having to figure out measurement conversions. We wanted an easier way to
+        quickly plug in a number and get exactly what we needed. Thus, Simple
+        Conversions was born! Whether you are cooking, traveling, trying to find
+        a temperature difference, or measure the size of a area, this site will
+        help you find a fast and simple solution to your conversion!
       </p>
 
       <h1>Why Metric and US/Imperial?</h1>
@@ -60,6 +64,12 @@ export default () => html`
         with quizes and helpful tutorials on how to take proper measurements.
         This will include how to properly read them as well! If you have any
         suggestions or feedback for future features, please let us know!
+      </p>
+      <h1>Disclaimer</h1>
+      <p>
+        Please note all measurement conversions are approximate numbers, and are
+        not exact conversion amounts. If you find any errors, please let us know
+        and we will look into getting them corrected!
       </p>
     </div>
   </main>
