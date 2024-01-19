@@ -212,7 +212,6 @@
 
 .metric-output p {
   color: #de8f3f;
-  border: 1px solid #de8f3f;
 }
 
 .metric-system {
@@ -316,6 +315,16 @@
   margin-bottom: 17%;
 }
 
+#characters a{
+  color: #96E2ED;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+#characters a:hover {
+  color: #FBF7F4;
+}
+
 @media (max-width: 280px) {
   .toggle-button {
     display: flex;
@@ -363,7 +372,6 @@ text-align: center;
 color: #de8f3f;
 margin-top: 25%;
 }
-
 }
 
 @media (max-width: 480px) {
